@@ -1,0 +1,254 @@
+[
+  {
+    "key": "chevrolet",
+    "name": "Chevrolet",
+    "nameAr": "شيفروليه",
+    "image": "/images/autogate-car-brands/chevrolet.webp",
+    "source": "https://alkhedr.b-cdn.net/47ae1ed59ee0751c43d49146e33c1d5c.png"
+  },
+  {
+    "key": "honda",
+    "name": "Honda",
+    "nameAr": "هوندا",
+    "image": "/images/autogate-car-brands/honda.webp",
+    "source": "https://alkhedr.b-cdn.net/231345b1215a0b6a0a1de117c1047235.png"
+  },
+  {
+    "key": "nissan",
+    "name": "Nissan",
+    "nameAr": "نيسان",
+    "image": "/images/autogate-car-brands/nissan.webp",
+    "source": "https://alkhedr.b-cdn.net/520a81e5cf8f1d72fc08872221a4aa41.png"
+  },
+  {
+    "key": "hyundai",
+    "name": "Hyundai",
+    "nameAr": "هيونداي",
+    "image": "/images/autogate-car-brands/hyundai.webp",
+    "source": "https://alkhedr.b-cdn.net/99c57c12ada8d4f3d95b1f7f2713b0b4.png"
+  },
+  {
+    "key": "kia",
+    "name": "KIA",
+    "nameAr": "كيا",
+    "image": "/images/autogate-car-brands/kia.webp",
+    "source": "https://alkhedr.b-cdn.net/kia-black-logo-png-701751694710513ncx96yu8gs__2_-removebg-preview.png"
+  },
+  {
+    "key": "jac",
+    "name": "JAC",
+    "nameAr": "جاك",
+    "image": "/images/autogate-car-brands/jac.webp",
+    "source": "https://alkhedr.b-cdn.net/JAC-Motors-logo-old-1920x1080.png"
+  },
+  {
+    "key": "bentley",
+    "name": "Bentley",
+    "nameAr": "بنتلي",
+    "image": "/images/autogate-car-brands/bentley.webp",
+    "source": "https://alkhedr.b-cdn.net/5ec40966195c530004f93f04.png"
+  },
+  {
+    "key": "mazda",
+    "name": "Mazda",
+    "nameAr": "مازدا",
+    "image": "/images/autogate-car-brands/mazda.webp",
+    "source": "https://alkhedr.b-cdn.net/580b57fcd9996e24bc43c491.png"
+  },
+  {
+    "key": "land-rover",
+    "name": "Land Rover",
+    "nameAr": "لاند روفر",
+    "image": "/images/autogate-car-brands/land-rover.webp",
+    "source": "https://alkhedr.b-cdn.net/580b57fcd9996e24bc43c48a.png"
+  },
+  {
+    "key": "jetour",
+    "name": "Jetour",
+    "nameAr": "جيتور",
+    "image": "/images/autogate-car-brands/jetour.webp",
+    "source": "https://alkhedr.b-cdn.net/download-removebg-preview (23).png"
+  },
+  {
+    "key": "lexus",
+    "name": "Lexus",
+    "nameAr": "لكزس",
+    "image": "/images/autogate-car-brands/lexus.webp",
+    "source": "https://alkhedr.b-cdn.net/580b57fcd9996e24bc43c48b.png"
+  },
+  {
+    "key": "renault",
+    "name": "Renault",
+    "nameAr": "رينو",
+    "image": "/images/autogate-car-brands/renault.webp",
+    "source": "https://alkhedr.b-cdn.net/1758716379500-renault-logo-png_seeklogo-264207.png"
+  },
+  {
+    "key": "rox",
+    "name": "ROX",
+    "nameAr": "روكس",
+    "image": "/images/autogate-car-brands/rox.webp",
+    "source": "https://alkhedr.b-cdn.net/1759006765964-c44eada151cb6151532dd39aa364f903_420x-removebg-preview.png"
+  },
+  {
+    "key": "ford",
+    "name": "Ford",
+    "nameAr": "فورد",
+    "image": "/images/autogate-car-brands/ford.webp",
+    "source": "https://alkhedr.b-cdn.net/1761216822340-download-removebg-preview (9).png"
+  },
+  {
+    "key": "toyota",
+    "name": "Toyota",
+    "nameAr": "تويوتا",
+    "image": "/images/autogate-car-brands/toyota.webp",
+    "source": "https://alkhedr.b-cdn.net/png-clipart-toyota-logo-car-logo-toyota-icons-logos-emojis-car-logos-thumbnail-removebg-preview.png"
+  },
+  {
+    "key": "zx-auto",
+    "name": "ZX Auto",
+    "nameAr": "زد إكس أوتو",
+    "image": "/images/autogate-car-brands/zx-auto.webp",
+    "source": "https://alkhedr.b-cdn.net/ZX_AUTO_logo-removebg-preview.png"
+  },
+  {
+    "key": "geely",
+    "name": "GEELY",
+    "nameAr": "جيلي",
+    "image": "/images/autogate-car-brands/geely.webp",
+    "source": "https://alkhedr.b-cdn.net/1747581945406-images__12_-removebg-preview.png"
+  },
+  {
+    "key": "mitsubishi",
+    "name": "Mitsubishi",
+    "nameAr": "ميتسوبيشي",
+    "image": "/images/autogate-car-brands/mitsubishi.webp",
+    "source": "https://alkhedr.b-cdn.net/1748501222654-ØªÙØ²ÙÙ-removebg-preview.png"
+  },
+  {
+    "key": "gmc",
+    "name": "GMC",
+    "nameAr": "جي إم سي",
+    "image": "/images/autogate-car-brands/gmc.webp",
+    "source": "https://alkhedr.b-cdn.net/1764586313442-gmc-logo-png_seeklogo-252337.png"
+  },
+  {
+    "key": "changan",
+    "name": "Changan",
+    "nameAr": "شانجان",
+    "image": "/images/autogate-car-brands/changan.webp",
+    "source": "https://alkhedr.b-cdn.net/1750859408884-images-removebg-preview.png"
+  },
+  {
+    "key": "maxus",
+    "name": "Maxus",
+    "nameAr": "ماكسوس",
+    "image": "/images/autogate-car-brands/maxus.webp",
+    "source": "https://alkhedr.b-cdn.net/1750865782590-ØªÙØ²ÙÙ-removebg-preview (1).png"
+  },
+  {
+    "key": "dongfeng",
+    "name": "Dongfeng",
+    "nameAr": "دونغ فينغ",
+    "image": "/images/autogate-car-brands/dongfeng.webp",
+    "source": "https://alkhedr.b-cdn.net/1752162570184-dongfeng_logo.png"
+  },
+  {
+    "key": "jeep",
+    "name": "JEEP",
+    "nameAr": "جيب",
+    "image": "/images/autogate-car-brands/jeep.webp",
+    "source": "https://alkhedr.b-cdn.net/1752334608215-Jeep-Logo.png"
+  },
+  {
+    "key": "foton",
+    "name": "FOTON",
+    "nameAr": "فوتون",
+    "image": "/images/autogate-car-brands/foton.webp",
+    "source": "https://alkhedr.b-cdn.net/1752509919396-Foton.png"
+  },
+  {
+    "key": "ssangyong",
+    "name": "SsangYong",
+    "nameAr": "سانغ يونغ",
+    "image": "/images/autogate-car-brands/ssangyong.webp",
+    "source": "https://alkhedr.b-cdn.net/1752680952351-ssangyong.png"
+  },
+  {
+    "key": "great-wall-motors",
+    "name": "Great Wall Motors",
+    "nameAr": "جريت وول موتورز",
+    "image": "/images/autogate-car-brands/great-wall-motors.webp",
+    "source": "https://alkhedr.b-cdn.net/1752761861152-gwm-logo-brandlogos.net_.png"
+  },
+  {
+    "key": "mahindra",
+    "name": "Mahindra",
+    "nameAr": "ماهيندرا",
+    "image": "/images/autogate-car-brands/mahindra.webp",
+    "source": "https://alkhedr.b-cdn.net/1768305127425-Mahindra_Auto.png"
+  },
+  {
+    "key": "riddara",
+    "name": "RIDDARA",
+    "nameAr": "ريدّارا",
+    "image": "/images/autogate-car-brands/riddara.webp",
+    "source": "https://alkhedr.b-cdn.net/1769270788876-make_66f653304af4e_logo.png"
+  },
+  {
+    "key": "gac",
+    "name": "GAC",
+    "nameAr": "جي إيه سي",
+    "image": "/images/autogate-car-brands/gac.webp",
+    "source": "https://alkhedr.b-cdn.net/1778760034471-gac_motor_logo-freelogovectors-net_.png"
+  },
+  {
+    "key": "isuzu",
+    "name": "ISUZU",
+    "nameAr": "إيسوزو",
+    "image": "/images/autogate-car-brands/isuzu.webp",
+    "source": "https://alkhedr.b-cdn.net/1778769719889-isuzu-logo.png"
+  },
+  {
+    "key": "omoda",
+    "name": "OMODA",
+    "nameAr": "أومودا",
+    "image": "/images/autogate-car-brands/omoda.webp",
+    "source": "https://alkhedr.b-cdn.net/1780908353391-omoda-logo_brandlogos-net_wup4k.png"
+  },
+  {
+    "key": "jaecoo",
+    "name": "JAECOO",
+    "nameAr": "جايكو",
+    "image": "/images/autogate-car-brands/jaecoo.webp",
+    "source": "https://alkhedr.b-cdn.net/1780908412993-jaecoo-logo_brandlogos-net_bvb7m-512x512.png"
+  },
+  {
+    "key": "haval",
+    "name": "HAVAL",
+    "nameAr": "هافال",
+    "image": "/images/autogate-car-brands/haval.webp",
+    "source": "https://alkhedr.b-cdn.net/1782395066042-haval-logo.png"
+  },
+  {
+    "key": "mg",
+    "name": "MG",
+    "nameAr": "إم جي",
+    "image": "/images/autogate-car-brands/mg.webp",
+    "source": "https://alkhedr.b-cdn.net/1785074995340-mg-logo-png-transparent.png"
+  },
+  {
+    "key": "212",
+    "name": "212",
+    "nameAr": "212",
+    "image": "/images/autogate-car-brands/212.webp",
+    "source": "https://alkhedr.b-cdn.net/1785075007496-images-removebg-preview.png"
+  },
+  {
+    "key": "junfeng",
+    "name": "JUNFENG",
+    "nameAr": "جونفنغ",
+    "image": "/images/autogate-car-brands/junfeng.webp",
+    "source": "https://alkhedr.b-cdn.net/1787580822723-1-u-u-u-u-o-u.png"
+  }
+]

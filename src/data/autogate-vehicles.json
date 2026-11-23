@@ -1,0 +1,850 @@
+[
+  {
+    "id": "odoo-2",
+    "displayName": "LInk & Co/01",
+    "manufacturer": "LInk & Co",
+    "make": "LInk & Co",
+    "model": "01",
+    "makeAr": "لينك آند كو",
+    "logo": "/images/manufacturers/lynk-co.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-3",
+    "displayName": "LInk & Co/03",
+    "manufacturer": "LInk & Co",
+    "make": "LInk & Co",
+    "model": "03",
+    "makeAr": "لينك آند كو",
+    "logo": "/images/manufacturers/lynk-co.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-4",
+    "displayName": "Mg/20 T",
+    "manufacturer": "Mg",
+    "make": "Mg",
+    "model": "20 T",
+    "makeAr": "إم جي",
+    "logo": "/images/manufacturers/mg.png",
+    "image": null
+  },
+  {
+    "id": "odoo-5",
+    "displayName": "BAW/212 T01",
+    "manufacturer": "BAW",
+    "make": "BAW",
+    "model": "212 T01",
+    "makeAr": "بي إيه دبليو",
+    "logo": "/images/manufacturers/baw.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-6",
+    "displayName": "Mg/3",
+    "manufacturer": "Mg",
+    "make": "Mg",
+    "model": "3",
+    "makeAr": "إم جي",
+    "logo": "/images/manufacturers/mg.png",
+    "image": null
+  },
+  {
+    "id": "odoo-7",
+    "displayName": "Chrysler/300",
+    "manufacturer": "Chrysler",
+    "make": "Chrysler",
+    "model": "300",
+    "makeAr": "كرايسلر",
+    "logo": "/images/manufacturers/chrysler.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-8",
+    "displayName": "Mg/5",
+    "manufacturer": "Mg",
+    "make": "Mg",
+    "model": "5",
+    "makeAr": "إم جي",
+    "logo": "/images/manufacturers/mg.png",
+    "image": null
+  },
+  {
+    "id": "odoo-9",
+    "displayName": "Mg/6",
+    "manufacturer": "Mg",
+    "make": "Mg",
+    "model": "6",
+    "makeAr": "إم جي",
+    "logo": "/images/manufacturers/mg.png",
+    "image": null
+  },
+  {
+    "id": "odoo-10",
+    "displayName": "Mazda/6",
+    "manufacturer": "Mazda",
+    "make": "Mazda",
+    "model": "6",
+    "makeAr": "مازدا",
+    "logo": "/images/manufacturers/mazda.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-11",
+    "displayName": "Bmw/735 i",
+    "manufacturer": "Bmw",
+    "make": "Bmw",
+    "model": "735 i",
+    "makeAr": "بي إم دبليو",
+    "logo": "/images/manufacturers/bmw.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-12",
+    "displayName": "Bmw/735i M KIT",
+    "manufacturer": "Bmw",
+    "make": "Bmw",
+    "model": "735i M KIT",
+    "makeAr": "بي إم دبليو",
+    "logo": "/images/manufacturers/bmw.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-13",
+    "displayName": "Junfeng/A08 HIGH ROOF",
+    "manufacturer": "Junfeng",
+    "make": "Junfeng",
+    "model": "A08 HIGH ROOF",
+    "makeAr": "جونفنغ",
+    "logo": "/images/manufacturers/junfeng.png",
+    "image": null
+  },
+  {
+    "id": "odoo-14",
+    "displayName": "Audi/A8",
+    "manufacturer": "Audi",
+    "make": "Audi",
+    "model": "A8",
+    "makeAr": "أودي",
+    "logo": "/images/manufacturers/audi.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-15",
+    "displayName": "GMC/ACADIA",
+    "manufacturer": "GMC",
+    "make": "GMC",
+    "model": "ACADIA",
+    "makeAr": "جي إم سي",
+    "logo": "/images/manufacturers/gmc.png",
+    "image": null
+  },
+  {
+    "id": "odoo-16",
+    "displayName": "Hyundai/Accent",
+    "manufacturer": "Hyundai",
+    "make": "Hyundai",
+    "model": "Accent",
+    "makeAr": "هيونداي",
+    "logo": "/images/manufacturers/hyundai.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-17",
+    "displayName": "Honda/Accord",
+    "manufacturer": "Honda",
+    "make": "Honda",
+    "model": "Accord",
+    "makeAr": "هوندا",
+    "logo": "/images/manufacturers/honda.png",
+    "image": null
+  },
+  {
+    "id": "odoo-18",
+    "displayName": "Honda/Accord(not)",
+    "manufacturer": "Honda",
+    "make": "Honda",
+    "model": "Accord(not)",
+    "makeAr": "هوندا",
+    "logo": "/images/manufacturers/honda.png",
+    "image": null
+  },
+  {
+    "id": "odoo-19",
+    "displayName": "Peugeot/ALLURE -408",
+    "manufacturer": "Peugeot",
+    "make": "Peugeot",
+    "model": "ALLURE -408",
+    "makeAr": "بيجو",
+    "logo": "/images/manufacturers/peugeot.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-20",
+    "displayName": "Changan/Alsvin",
+    "manufacturer": "Changan",
+    "make": "Changan",
+    "model": "Alsvin",
+    "makeAr": "شانجان",
+    "logo": "/images/manufacturers/changan.png",
+    "image": null
+  },
+  {
+    "id": "odoo-21",
+    "displayName": "Nissan/Altima",
+    "manufacturer": "Nissan",
+    "make": "Nissan",
+    "model": "Altima",
+    "makeAr": "نيسان",
+    "logo": "/images/manufacturers/nissan.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-22",
+    "displayName": "Toyota/Aqua",
+    "manufacturer": "Toyota",
+    "make": "Toyota",
+    "model": "Aqua",
+    "makeAr": "تويوتا",
+    "logo": "/images/manufacturers/toyota.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-23",
+    "displayName": "Renault/Arkana",
+    "manufacturer": "Renault",
+    "make": "Renault",
+    "model": "Arkana",
+    "makeAr": "رينو",
+    "logo": "/images/manufacturers/renault.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-24",
+    "displayName": "Arrizo 3",
+    "manufacturer": null,
+    "make": "Chery",
+    "model": "Arrizo 3",
+    "makeAr": "شيري",
+    "logo": "/images/manufacturers/chery.png",
+    "image": null
+  },
+  {
+    "id": "odoo-25",
+    "displayName": "Chery/Arrizo 5",
+    "manufacturer": "Chery",
+    "make": "Chery",
+    "model": "Arrizo 5",
+    "makeAr": "شيري",
+    "logo": "/images/manufacturers/chery.png",
+    "image": null
+  },
+  {
+    "id": "odoo-26",
+    "displayName": "Chery/Arrizo 5 PRO",
+    "manufacturer": "Chery",
+    "make": "Chery",
+    "model": "Arrizo 5 PRO",
+    "makeAr": "شيري",
+    "logo": "/images/manufacturers/chery.png",
+    "image": null
+  },
+  {
+    "id": "odoo-27",
+    "displayName": "Chery/Arrizo 6",
+    "manufacturer": "Chery",
+    "make": "Chery",
+    "model": "Arrizo 6",
+    "makeAr": "شيري",
+    "logo": "/images/manufacturers/chery.png",
+    "image": null
+  },
+  {
+    "id": "odoo-28",
+    "displayName": "Chery/Arrizo 6 Pro",
+    "manufacturer": "Chery",
+    "make": "Chery",
+    "model": "Arrizo 6 Pro",
+    "makeAr": "شيري",
+    "logo": "/images/manufacturers/chery.png",
+    "image": null
+  },
+  {
+    "id": "odoo-29",
+    "displayName": "Chery/Arrizo 8 Pro",
+    "manufacturer": "Chery",
+    "make": "Chery",
+    "model": "Arrizo 8 Pro",
+    "makeAr": "شيري",
+    "logo": "/images/manufacturers/chery.png",
+    "image": null
+  },
+  {
+    "id": "odoo-30",
+    "displayName": "Mitsubishi/ASX",
+    "manufacturer": "Mitsubishi",
+    "make": "Mitsubishi",
+    "model": "ASX",
+    "makeAr": "ميتسوبيشي",
+    "logo": "/images/manufacturers/mitsubishi.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-31",
+    "displayName": "Cadillac/ATC",
+    "manufacturer": "Cadillac",
+    "make": "Cadillac",
+    "model": "ATC",
+    "makeAr": "كاديلاك",
+    "logo": "/images/manufacturers/cadillac.png",
+    "image": null
+  },
+  {
+    "id": "odoo-32",
+    "displayName": "Cadillac/ATS",
+    "manufacturer": "Cadillac",
+    "make": "Cadillac",
+    "model": "ATS",
+    "makeAr": "كاديلاك",
+    "logo": "/images/manufacturers/cadillac.png",
+    "image": null
+  },
+  {
+    "id": "odoo-33",
+    "displayName": "Mitsubishi/Attrage",
+    "manufacturer": "Mitsubishi",
+    "make": "Mitsubishi",
+    "model": "Attrage",
+    "makeAr": "ميتسوبيشي",
+    "logo": "/images/manufacturers/mitsubishi.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-34",
+    "displayName": "Toyota/Avalon",
+    "manufacturer": "Toyota",
+    "make": "Toyota",
+    "model": "Avalon",
+    "makeAr": "تويوتا",
+    "logo": "/images/manufacturers/toyota.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-35",
+    "displayName": "Hyundai/Avante",
+    "manufacturer": "Hyundai",
+    "make": "Hyundai",
+    "model": "Avante",
+    "makeAr": "هيونداي",
+    "logo": "/images/manufacturers/hyundai.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-36",
+    "displayName": "Toyota/Avanza",
+    "manufacturer": "Toyota",
+    "make": "Toyota",
+    "model": "Avanza",
+    "makeAr": "تويوتا",
+    "logo": "/images/manufacturers/toyota.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-37",
+    "displayName": "Hyundai/Azera",
+    "manufacturer": "Hyundai",
+    "make": "Hyundai",
+    "model": "Azera",
+    "makeAr": "هيونداي",
+    "logo": "/images/manufacturers/hyundai.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-38",
+    "displayName": "Geely/AZKARRA",
+    "manufacturer": "Geely",
+    "make": "Geely",
+    "model": "AZKARRA",
+    "makeAr": "جيلي",
+    "logo": "/images/manufacturers/geely.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-39",
+    "displayName": "FAW/B70",
+    "manufacturer": "FAW",
+    "make": "FAW",
+    "model": "B70",
+    "makeAr": "فاو",
+    "logo": "/images/manufacturers/faw.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-40",
+    "displayName": "Suzuki/Baleno",
+    "manufacturer": "Suzuki",
+    "make": "Suzuki",
+    "model": "Baleno",
+    "makeAr": "سوزوكي",
+    "logo": "/images/manufacturers/suzuki.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-41",
+    "displayName": "FAW/Bestune Mini EV",
+    "manufacturer": "FAW",
+    "make": "FAW",
+    "model": "Bestune Mini EV",
+    "makeAr": "فاو",
+    "logo": "/images/manufacturers/faw.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-42",
+    "displayName": "BAIC/BJ40",
+    "manufacturer": "BAIC",
+    "make": "BAIC",
+    "model": "BJ40",
+    "makeAr": "بايك",
+    "logo": "/images/manufacturers/baic.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-43",
+    "displayName": "Peugeot/BOXER",
+    "manufacturer": "Peugeot",
+    "make": "Peugeot",
+    "model": "BOXER",
+    "makeAr": "بيجو",
+    "logo": "/images/manufacturers/peugeot.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-44",
+    "displayName": "Mercedes/C 300",
+    "manufacturer": "Mercedes",
+    "make": "Mercedes",
+    "model": "C 300",
+    "makeAr": "مرسيدس",
+    "logo": "/images/manufacturers/mercedes-benz.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-45",
+    "displayName": "OMODA/ C5",
+    "manufacturer": "OMODA",
+    "make": "OMODA",
+    "model": " C5",
+    "makeAr": "أومودا",
+    "logo": "/images/manufacturers/omoda.png",
+    "image": null
+  },
+  {
+    "id": "odoo-46",
+    "displayName": "Chevrolet/Camaro",
+    "manufacturer": "Chevrolet",
+    "make": "Chevrolet",
+    "model": "Camaro",
+    "makeAr": "شيفروليه",
+    "logo": "/images/manufacturers/chevrolet.png",
+    "image": null
+  },
+  {
+    "id": "odoo-47",
+    "displayName": "Toyota/Camry",
+    "manufacturer": "Toyota",
+    "make": "Toyota",
+    "model": "Camry",
+    "makeAr": "تويوتا",
+    "logo": "/images/manufacturers/toyota.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-48",
+    "displayName": "Junfeng/CAPTAIN V PASSENGER VAN",
+    "manufacturer": "Junfeng",
+    "make": "Junfeng",
+    "model": "CAPTAIN V PASSENGER VAN",
+    "makeAr": "جونفنغ",
+    "logo": "/images/manufacturers/junfeng.png",
+    "image": null
+  },
+  {
+    "id": "odoo-49",
+    "displayName": "Chevrolet/Captiva",
+    "manufacturer": "Chevrolet",
+    "make": "Chevrolet",
+    "model": "Captiva",
+    "makeAr": "شيفروليه",
+    "logo": "/images/manufacturers/chevrolet.png",
+    "image": null
+  },
+  {
+    "id": "odoo-50",
+    "displayName": "Renault/Captur",
+    "manufacturer": "Renault",
+    "make": "Renault",
+    "model": "Captur",
+    "makeAr": "رينو",
+    "logo": "/images/manufacturers/renault.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-51",
+    "displayName": "Kia/CARENS",
+    "manufacturer": "Kia",
+    "make": "Kia",
+    "model": "CARENS",
+    "makeAr": "كيا",
+    "logo": "/images/manufacturers/kia.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-52",
+    "displayName": "Kia/Carnival",
+    "manufacturer": "Kia",
+    "make": "Kia",
+    "model": "Carnival",
+    "makeAr": "كيا",
+    "logo": "/images/manufacturers/kia.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-53",
+    "displayName": "Suzuki/CARRY",
+    "manufacturer": "Suzuki",
+    "make": "Suzuki",
+    "model": "CARRY",
+    "makeAr": "سوزوكي",
+    "logo": "/images/manufacturers/suzuki.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-54",
+    "displayName": "Kia/CERATO",
+    "manufacturer": "Kia",
+    "make": "Kia",
+    "model": "CERATO",
+    "makeAr": "كيا",
+    "logo": "/images/manufacturers/kia.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-55",
+    "displayName": "Dodge/Charger",
+    "manufacturer": "Dodge",
+    "make": "Dodge",
+    "model": "Charger",
+    "makeAr": "دودج",
+    "logo": "/images/manufacturers/dodge.png",
+    "image": null
+  },
+  {
+    "id": "odoo-56",
+    "displayName": "Jeep/Cherokee",
+    "manufacturer": "Jeep",
+    "make": "Jeep",
+    "model": "Cherokee",
+    "makeAr": "جيب",
+    "logo": "/images/manufacturers/jeep.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-57",
+    "displayName": "Suzuki/Ciaz",
+    "manufacturer": "Suzuki",
+    "make": "Suzuki",
+    "model": "Ciaz",
+    "makeAr": "سوزوكي",
+    "logo": "/images/manufacturers/suzuki.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-58",
+    "displayName": "Honda/City",
+    "manufacturer": "Honda",
+    "make": "Honda",
+    "model": "City",
+    "makeAr": "هوندا",
+    "logo": "/images/manufacturers/honda.png",
+    "image": null
+  },
+  {
+    "id": "odoo-59",
+    "displayName": "Geely/Cityray",
+    "manufacturer": "Geely",
+    "make": "Geely",
+    "model": "Cityray",
+    "makeAr": "جيلي",
+    "logo": "/images/manufacturers/geely.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-60",
+    "displayName": "Toyota/Coaster",
+    "manufacturer": "Toyota",
+    "make": "Toyota",
+    "model": "Coaster",
+    "makeAr": "تويوتا",
+    "logo": "/images/manufacturers/toyota.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-61",
+    "displayName": "Hyundai/Coaster",
+    "manufacturer": "Hyundai",
+    "make": "Hyundai",
+    "model": "Coaster",
+    "makeAr": "هيونداي",
+    "logo": "/images/manufacturers/hyundai.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-62",
+    "displayName": "Geely/Coolray",
+    "manufacturer": "Geely",
+    "make": "Geely",
+    "model": "Coolray",
+    "makeAr": "جيلي",
+    "logo": "/images/manufacturers/geely.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-63",
+    "displayName": "Mini/Cooper",
+    "manufacturer": "Mini",
+    "make": "Mini",
+    "model": "Cooper",
+    "makeAr": "ميني",
+    "logo": "/images/manufacturers/mini.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-64",
+    "displayName": "Toyota/Corolla",
+    "manufacturer": "Toyota",
+    "make": "Toyota",
+    "model": "Corolla",
+    "makeAr": "تويوتا",
+    "logo": "/images/manufacturers/toyota.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-65",
+    "displayName": "Hyundai/Creta",
+    "manufacturer": "Hyundai",
+    "make": "Hyundai",
+    "model": "Creta",
+    "makeAr": "هيونداي",
+    "logo": "/images/manufacturers/hyundai.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-66",
+    "displayName": "Toyota/Crown",
+    "manufacturer": "Toyota",
+    "make": "Toyota",
+    "model": "Crown",
+    "makeAr": "تويوتا",
+    "logo": "/images/manufacturers/toyota.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-67",
+    "displayName": "Chevrolet/Cruze",
+    "manufacturer": "Chevrolet",
+    "make": "Chevrolet",
+    "model": "Cruze",
+    "makeAr": "شيفروليه",
+    "logo": "/images/manufacturers/chevrolet.png",
+    "image": null
+  },
+  {
+    "id": "odoo-68",
+    "displayName": "Changan/CS35 Plus",
+    "manufacturer": "Changan",
+    "make": "Changan",
+    "model": "CS35 Plus",
+    "makeAr": "شانجان",
+    "logo": "/images/manufacturers/changan.png",
+    "image": null
+  },
+  {
+    "id": "odoo-69",
+    "displayName": "Changan/CS75 PLUS",
+    "manufacturer": "Changan",
+    "make": "Changan",
+    "model": "CS75 PLUS",
+    "makeAr": "شانجان",
+    "logo": "/images/manufacturers/changan.png",
+    "image": null
+  },
+  {
+    "id": "odoo-70",
+    "displayName": "Changan/CS 85",
+    "manufacturer": "Changan",
+    "make": "Changan",
+    "model": "CS 85",
+    "makeAr": "شانجان",
+    "logo": "/images/manufacturers/changan.png",
+    "image": null
+  },
+  {
+    "id": "odoo-71",
+    "displayName": "Changan/CS 95",
+    "manufacturer": "Changan",
+    "make": "Changan",
+    "model": "CS 95",
+    "makeAr": "شانجان",
+    "logo": "/images/manufacturers/changan.png",
+    "image": null
+  },
+  {
+    "id": "odoo-72",
+    "displayName": "Mazda/CX 5",
+    "manufacturer": "Mazda",
+    "make": "Mazda",
+    "model": "CX 5",
+    "makeAr": "مازدا",
+    "logo": "/images/manufacturers/mazda.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-73",
+    "displayName": "Mazda/CX 9",
+    "manufacturer": "Mazda",
+    "make": "Mazda",
+    "model": "CX 9",
+    "makeAr": "مازدا",
+    "logo": "/images/manufacturers/mazda.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-74",
+    "displayName": "BAIC/D50",
+    "manufacturer": "BAIC",
+    "make": "BAIC",
+    "model": "D50",
+    "makeAr": "بايك",
+    "logo": "/images/manufacturers/baic.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-75",
+    "displayName": "Maxus/D60",
+    "manufacturer": "Maxus",
+    "make": "Maxus",
+    "model": "D60",
+    "makeAr": "ماكسوس",
+    "logo": "/images/manufacturers/maxus.png",
+    "image": null
+  },
+  {
+    "id": "odoo-76",
+    "displayName": "Maxus/D60 Max",
+    "manufacturer": "Maxus",
+    "make": "Maxus",
+    "model": "D60 Max",
+    "makeAr": "ماكسوس",
+    "logo": "/images/manufacturers/maxus.png",
+    "image": null
+  },
+  {
+    "id": "odoo-77",
+    "displayName": "Maxus/D90",
+    "manufacturer": "Maxus",
+    "make": "Maxus",
+    "model": "D90",
+    "makeAr": "ماكسوس",
+    "logo": "/images/manufacturers/maxus.png",
+    "image": null
+  },
+  {
+    "id": "odoo-78",
+    "displayName": "Maxus/D90 Max",
+    "manufacturer": "Maxus",
+    "make": "Maxus",
+    "model": "D90 Max",
+    "makeAr": "ماكسوس",
+    "logo": "/images/manufacturers/maxus.png",
+    "image": null
+  },
+  {
+    "id": "odoo-79",
+    "displayName": "Jetour/Dashing",
+    "manufacturer": "Jetour",
+    "make": "Jetour",
+    "model": "Dashing",
+    "makeAr": "جيتور",
+    "logo": "/images/manufacturers/jetour.png",
+    "image": null
+  },
+  {
+    "id": "odoo-80",
+    "displayName": "Land Rover/DEFENDER",
+    "manufacturer": "Land Rover",
+    "make": "Land Rover",
+    "model": "DEFENDER",
+    "makeAr": "لاند روفر",
+    "logo": "/images/manufacturers/land-rover.svg",
+    "image": null
+  },
+  {
+    "id": "odoo-81",
+    "displayName": "Mitsubishi/Destinator",
+    "manufacturer": "Mitsubishi",
+    "make": "Mitsubishi",
+    "model": "Destinator",
+    "makeAr": "ميتسوبيشي",
+    "logo": "/images/manufacturers/mitsubishi.svg",
+    "image": null
+  },
+  {
+    "make": "Ford",
+    "model": "F-150",
+    "image": null,
+    "id": "sample-0",
+    "displayName": "Ford F-150",
+    "manufacturer": "Ford",
+    "makeAr": "فورد",
+    "logo": "/images/manufacturers/ford.png"
+  },
+  {
+    "make": "Toyota",
+    "model": "RAV4",
+    "image": null,
+    "id": "sample-1",
+    "displayName": "Toyota RAV4",
+    "manufacturer": "Toyota",
+    "makeAr": "تويوتا",
+    "logo": "/images/manufacturers/toyota.svg"
+  },
+  {
+    "make": "Tesla",
+    "model": "Model 3",
+    "image": null,
+    "id": "sample-2",
+    "displayName": "Tesla Model 3",
+    "manufacturer": "Tesla",
+    "makeAr": "تسلا",
+    "logo": "/images/manufacturers/tesla.svg"
+  },
+  {
+    "id": "legacy-brand-alfa-romeo",
+    "make": "Alfa Romeo",
+    "makeAr": "ألفا روميو",
+    "logo": "/images/manufacturers/alfa-romeo-logo.svg"
+  },
+  {
+    "id": "legacy-brand-aston-martin",
+    "make": "Aston Martin",
+    "makeAr": "أستون مارتن",
+    "logo": "/images/manufacturers/aston-martin-logo.svg"
+  },
+  {
+    "id": "legacy-brand-lexus",
+    "make": "Lexus",
+    "makeAr": "لكزس",
+    "logo": "/images/manufacturers/lexus-logo.png"
+  }
+]

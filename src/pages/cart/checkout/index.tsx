@@ -1,0 +1,224 @@
+import { useLocalize } from '~/services/i18n/localize';
+/* eslint-disable no-alert */
+
+// react
+import React, { useEffect, useState } from 'react';
+// third-party
+import classNames from 'classnames';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { FormProvider, useForm } from 'react-hook-form';
+import { useRouter } from 'next/router';
+// application
+import AppLink from '~/components/shared/AppLink';
+import BlockHeader from '~/components/blocks/BlockHeader';
+import BlockSpace from '~/components/blocks/BlockSpace';
+import Checkbox from '~/components/shared/Checkbox';
+import CheckoutCart from '~/components/shop/CheckoutCart';
+import CheckoutForm from '~/components/shop/CheckoutForm';
+import CheckoutPayments from '~/components/shop/CheckoutPayments';
+import PageTitle from '~/components/shared/PageTitle';
+import url from '~/services/url';
+import { getAddressFormDefaultValue, IAddressForm } from '~/components/shared/AddressForm';
+import { getRegisterFormDefaultValue, IRegisterForm } from '~/components/shared/RegisterForm';
+import { hrefToRouterArgs } from '~/services/router';
+import { ICheckoutData } from '~/api/base';
+import { shopApi } from '~/api';
+import { useAsyncAction } from '~/store/hooks';
+import { useCart } from '~/store/cart/cartHooks';
+import { useUser, useUserSignUp } from '~/store/user/userHooks';
+
+interface IForm {
+    billingAddress: IAddressForm;
+    createAccount: boolean;
+    account: IRegisterForm;
+    shipToDifferentAddress: boolean;
+    shippingAddress: IAddressForm;
+    comment: string;
+    payment: string;
+    agree: boolean;
+}
+
+function Page() {
+    const l10n = useLocalize();
+
+    const router = useRouter();
+    const intl = useIntl();
+    const user = useUser();
+    const userSignUp = useUserSignUp();
+    const cart = useCart();
+    const [orderError, setOrderError] = useState(false);
+    const formMethods = useForm<IForm>({
+        defaultValues: {
+            billingAddress: { ...getAddressFormDefaultValue(), country: 'SA' },
+            createAccount: false,
+            account: getRegisterFormDefaultValue(),
+            shipToDifferentAddress: false,
+            shippingAddress: { ...getAddressFormDefaultValue(), country: 'SA' },
+            comment: '',
+            payment: 'mada',
+        },
+    });
+    const { handleSubmit, register, formState: { errors } } = formMethods;
+    const [checkout, checkoutInProgress] = useAsyncAction(async (data: IForm) => {
+        const { billingAddress } = data;
+        const shippingAddress = data.shipToDifferentAddress ? data.shippingAddress : data.billingAddress;
+
+        const checkoutData: ICheckoutData = {
+            payment: data.payment,
+            items: cart.items.map((item) => ({
+                productId: item.product.id,
+                options: item.options.map((option) => ({
+                    name: option.name,
+                    value: option.value,
+                })),
+                quantity: item.quantity,
+            })),
+            billingAddress,
+            shippingAddress,
+            comment: data.comment,
+        };
+
+        if (data.createAccount) {
+            try {
+                await userSignUp(data.account.email, data.account.password);
+            } catch (error) {
+                if (error instanceof Error) {
+                    alert(intl.formatMessage({ id: `ERROR_API_${error.message}` }));
+                }
+
+                return;
+            }
+        }
+
+        setOrderError(false);
+        try {
+            const order = await shopApi.checkout(checkoutData);
+            await router.push(...hrefToRouterArgs(url.checkoutSuccess(order)));
+        } catch {
+            setOrderError(true);
+        }
+    }, [intl, cart, userSignUp, router]);
+
+    useEffect(() => {
+        if (cart.stateFrom === 'client' && cart.items.length < 1) {
+            router.replace(url.cart()).then();
+        }
+    }, [cart.stateFrom, cart.items.length, router]);
+
+    if (cart.items.length < 1) {
+        return null;
+    }
+
+    const { ref: agreeRef, ...agreeProps } = register('agree', { required: true });
+
+    return (
+        <React.Fragment>
+            <PageTitle>{l10n(intl.formatMessage({ id: 'HEADER_CHECKOUT' }))}</PageTitle>
+
+            <BlockHeader
+                pageTitle={<FormattedMessage id="HEADER_CHECKOUT" />}
+                breadcrumb={[
+                    { title: (<FormattedMessage id="LINK_HOME" />), url: url.home() },
+                    { title: (<FormattedMessage id="LINK_CART" />), url: url.cart() },
+                    { title: (<FormattedMessage id="LINK_CHECKOUT" />), url: url.checkout() },
+                ]}
+            />
+
+            <FormProvider {...formMethods}>
+                <form className="checkout block" onSubmit={handleSubmit(checkout)}>
+                    <div className="container container--max--xl">
+                        <div className="row">
+                            {l10n(!user && (
+                                <div className="col-12 mb-3">
+                                    <div className="alert alert-lg alert-primary">
+                                        <FormattedMessage
+                                            id="TEXT_ALERT_RETURNING_CUSTOMER"
+                                            values={{
+                                                link: (
+                                                    <AppLink href={url.signIn()}>
+                                                        <FormattedMessage id="TEXT_ALERT_RETURNING_CUSTOMER_LINK" />
+                                                    </AppLink>
+                                                ),
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+
+                            <div className="col-12 col-lg-6 col-xl-7">
+                                <div className="card mb-lg-0">
+                                    <div className="card-body card-body--padding--2">
+                                        <CheckoutForm />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-12 col-lg-6 col-xl-5 mt-4 mt-lg-0">
+                                <div className="card mb-0">
+                                    <div className="card-body card-body--padding--2">
+                                        <h3 className="card-title">
+                                            <FormattedMessage id="HEADER_YOUR_ORDER" />
+                                        </h3>
+
+                                        <CheckoutCart />
+
+                                        <p className="alert alert-warning" role="note"><FormattedMessage id="CHECKOUT_DEMO_NOTICE" /></p>
+                                        <CheckoutPayments />
+                                        {orderError && <p role="alert"><FormattedMessage id="CHECKOUT_DEMO_ERROR" /></p>}
+
+                                        <div className="checkout__agree form-group">
+                                            <div className="form-check">
+                                                <Checkbox
+                                                    id="checkout-form-agree"
+                                                    className={classNames('form-check-input', {
+                                                        'is-invalid': errors.agree,
+                                                    })}
+                                                    inputRef={agreeRef}
+                                                    {...agreeProps}
+                                                />
+                                                <label className="form-check-label" htmlFor="checkout-form-agree">
+                                                    <FormattedMessage
+                                                        id="INPUT_TERMS_AGREE_LABEL"
+                                                        values={{
+                                                            link: (
+                                                                <AppLink href={url.pageTerms()} target="_blank">
+                                                                    <FormattedMessage
+                                                                        id="INPUT_TERMS_AGREE_LABEL_LINK"
+                                                                    />
+                                                                </AppLink>
+                                                            ),
+                                                        }}
+                                                    />
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            type="submit"
+                                            disabled={checkoutInProgress}
+                                            className={classNames(
+                                                'btn',
+                                                'btn-primary',
+                                                'btn-xl',
+                                                'btn-block',
+                                                {
+                                                    'btn-loading': checkoutInProgress,
+                                                },
+                                            )}
+                                        >
+                                            <FormattedMessage id="CHECKOUT_DEMO_SUBMIT" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </FormProvider>
+
+            <BlockSpace layout="before-footer" />
+        </React.Fragment>
+    );
+}
+
+export default Page;

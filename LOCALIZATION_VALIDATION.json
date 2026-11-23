@@ -1,0 +1,29 @@
+{
+  "ui_message_keys_per_language": 357,
+  "bilingual_content_entries": 828,
+  "supported_locales": [
+    "en",
+    "ar"
+  ],
+  "default_locale": "en",
+  "directions": {
+    "en": "ltr",
+    "ar": "rtl"
+  },
+  "browser_checks": [
+    "Arabic home and alternate home",
+    "Arabic product and specifications",
+    "Arabic product options in cart",
+    "Localized add-to-cart notification",
+    "Arabic catalog and filters",
+    "Arabic search suggestions",
+    "English product after switching locale with retained cart",
+    "Arabic checkout form and order summary",
+    "Arabic empty compare state",
+    "Arabic about, FAQ, blog and login forms",
+    "English FAQ",
+    "390px mobile Arabic layout and mobile language selector",
+    "Mobile English LTR switch"
+  ],
+  "automated_checks": "PASS: verify:locales, TypeScript validation and optimized Next.js production build"
+}

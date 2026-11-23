@@ -1,0 +1,109 @@
+/*
+// .vehicle-select
+*/
+@import '../variables';
+@import '../svg';
+@import '../mixins/breakpoints';
+@import '../mixins/direction';
+@import '../mixins/loader';
+
+
+$local-control-gutter: 14px;
+
+
+.vehicle-select {
+    display: block;
+}
+.vehicle-select__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: $local-control-gutter;
+}
+.vehicle-select__item {
+    position: relative;
+    min-width: 0;
+}
+.vehicle-select__item-loader {
+    @include loader-overlay(#fff, 0px, 0px, 20px, 2px, $autogate-coffee);
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+
+    &:before {
+        opacity: 1;
+        border-radius: 2.5px;
+    }
+}
+.vehicle-select__item--loading {
+    .vehicle-select__item-loader {
+        pointer-events: all;
+        opacity: 1;
+    }
+}
+.vehicle-select__item-control,
+.vehicle-select__item .form-control {
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 2px;
+    color: $block-finder-select-font-color;
+    background-color: $block-finder-select-bg-color;
+    background-repeat: no-repeat;
+    background-size: 5px 10px;
+    background-image: url(svg-select-arrow($block-finder-select-arrow-color));
+    transition:
+        opacity .25s ease-in-out,
+        color .25s ease-in-out;
+
+    @include direction {
+        #{$padding-inline-start}: 16px;
+        #{$padding-inline-end}: (5px + 12px * 2);
+        background-position: $inline-end 12px center;
+        text-align: $inline-start;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        opacity: .65;
+        color: $block-finder-select-disabled-font-color;
+    }
+}
+
+// The custom make/model summary and the native selects share the same outer size.
+.vehicle-select__item summary.form-control {
+    display: block;
+    line-height: 44px;
+}
+.vehicle-select__item .form-control:disabled {
+    background-color: $block-finder-select-bg-color;
+}
+
+@include media-breakpoint-down(lg) {
+    .vehicle-select__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .vehicle-select__list {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 260px;
+        margin-inline: auto;
+    }
+    .vehicle-select__item-control,
+    .vehicle-select__item .form-control {
+        height: 40px;
+    }
+    .vehicle-select__item summary.form-control {
+        line-height: 40px;
+    }
+}

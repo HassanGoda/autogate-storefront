@@ -1,0 +1,261 @@
+{
+  "categories": [
+    {
+      "name": "Engine Parts",
+      "slug": "ag-engine-parts",
+      "items": 3,
+      "image": "/images/autogate-parts/ag-engine-parts.jpg"
+    },
+    {
+      "name": "Body Parts",
+      "slug": "ag-body-parts",
+      "items": 2,
+      "image": "/images/autogate-parts/ag-body-parts.jpg"
+    },
+    {
+      "name": "Electrical",
+      "slug": "ag-electrical",
+      "items": 2,
+      "image": "/images/autogate-parts/ag-electrical.jpg"
+    },
+    {
+      "name": "Suspension",
+      "slug": "ag-suspension",
+      "items": 2,
+      "image": "/images/autogate-parts/ag-suspension.jpg"
+    },
+    {
+      "name": "Accessories",
+      "slug": "ag-accessories",
+      "items": 2,
+      "image": "/images/autogate-parts/ag-accessories.jpg"
+    },
+    {
+      "name": "Others",
+      "slug": "ag-others",
+      "items": 0,
+      "image": "/images/autogate-parts/ag-others.jpg"
+    }
+  ],
+  "products": [
+    {
+      "name": "Engine Oil Filter",
+      "slug": "ag-engine-oil-filter",
+      "sku": "AG-DEMO-001",
+      "price": 41.39,
+      "images": [
+        "/images/autogate-parts/ag-engine-oil-filter.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-engine-parts"
+      ],
+      "compatibility": "unknown",
+      "description": "High quality engine oil filter for optimal engine protection",
+      "badges": [
+        "sale",
+        "featured"
+      ],
+      "compareAtPrice": 45.99
+    },
+    {
+      "name": "Spark Plugs Set",
+      "slug": "ag-spark-plugs-set",
+      "sku": "AG-DEMO-002",
+      "price": 89.99,
+      "images": [
+        "/images/autogate-parts/ag-spark-plugs-set.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-engine-parts"
+      ],
+      "compatibility": "unknown",
+      "description": "Set of 4 high-performance spark plugs",
+      "badges": []
+    },
+    {
+      "name": "Air Filter",
+      "slug": "ag-air-filter",
+      "sku": "AG-DEMO-003",
+      "price": 32.5,
+      "images": [
+        "/images/autogate-parts/ag-air-filter.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-engine-parts"
+      ],
+      "compatibility": "unknown",
+      "description": "Engine air filter for improved performance",
+      "badges": [
+        "featured"
+      ]
+    },
+    {
+      "name": "Car Door Handle",
+      "slug": "ag-car-door-handle",
+      "sku": "AG-DEMO-004",
+      "price": 25.99,
+      "images": [
+        "/images/autogate-parts/ag-car-door-handle.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-body-parts"
+      ],
+      "compatibility": "unknown",
+      "description": "Exterior door handle replacement",
+      "badges": []
+    },
+    {
+      "name": "Headlight Assembly",
+      "slug": "ag-headlight-assembly",
+      "sku": "AG-DEMO-005",
+      "price": 161.49,
+      "images": [
+        "/images/autogate-parts/ag-headlight-assembly.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-body-parts"
+      ],
+      "compatibility": "unknown",
+      "description": "Complete headlight assembly with bulb",
+      "badges": [
+        "sale",
+        "featured"
+      ],
+      "compareAtPrice": 189.99
+    },
+    {
+      "name": "Car Battery",
+      "slug": "ag-car-battery",
+      "sku": "AG-DEMO-006",
+      "price": 299.99,
+      "images": [
+        "/images/autogate-parts/ag-car-battery.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-electrical"
+      ],
+      "compatibility": "unknown",
+      "description": "12V car battery with high capacity",
+      "badges": [
+        "featured"
+      ]
+    },
+    {
+      "name": "Alternator",
+      "slug": "ag-alternator",
+      "sku": "AG-DEMO-007",
+      "price": 332.49,
+      "images": [
+        "/images/autogate-parts/ag-alternator.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-electrical"
+      ],
+      "compatibility": "unknown",
+      "description": "Car alternator for charging system",
+      "badges": [
+        "sale"
+      ],
+      "compareAtPrice": 349.99
+    },
+    {
+      "name": "Brake Pad Set",
+      "slug": "ag-brake-pad-set",
+      "sku": "AG-DEMO-008",
+      "price": 79.99,
+      "images": [
+        "/images/autogate-parts/ag-brake-pad-set.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-suspension"
+      ],
+      "compatibility": "unknown",
+      "description": "High quality brake pads for optimal stopping power",
+      "badges": [
+        "featured"
+      ]
+    },
+    {
+      "name": "Shock Absorber",
+      "slug": "ag-shock-absorber",
+      "sku": "AG-DEMO-009",
+      "price": 129.99,
+      "images": [
+        "/images/autogate-parts/ag-shock-absorber.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-suspension"
+      ],
+      "compatibility": "unknown",
+      "description": "Front shock absorber for smooth ride",
+      "badges": []
+    },
+    {
+      "name": "Car Floor Mats",
+      "slug": "ag-car-floor-mats",
+      "sku": "AG-DEMO-010",
+      "price": 39.99,
+      "images": [
+        "/images/autogate-parts/ag-car-floor-mats.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-accessories"
+      ],
+      "compatibility": "unknown",
+      "description": "Universal fit car floor mats",
+      "badges": [
+        "sale",
+        "featured"
+      ],
+      "compareAtPrice": 49.99
+    },
+    {
+      "name": "Phone Mount",
+      "slug": "ag-phone-mount",
+      "sku": "AG-DEMO-011",
+      "price": 24.99,
+      "images": [
+        "/images/autogate-parts/ag-phone-mount.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "in-stock",
+      "categories": [
+        "ag-accessories"
+      ],
+      "compatibility": "unknown",
+      "description": "Dashboard phone mount with holder",
+      "badges": []
+    }
+  ]
+}

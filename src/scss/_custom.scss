@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "AutoGate Tajawal";
+    src: url("../../public/fonts/Tajawal-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-display: swap;
+}
+:root {
+    --autogate-primary: #{$autogate-saffron};
+    --autogate-link: #{$autogate-brown};
+    --autogate-border: #ddd4cb;
+    --autogate-surface: #fff;
+}
+
+// --------------------------------------------------------------------------
+// -- You can add your custom CSS here and it will overwrite template styles.
+// --------------------------------------------------------------------------
+
+html[lang="ar"] body, html[lang="ar"] input, html[lang="ar"] button, html[lang="ar"] textarea, html[lang="ar"] select {
+    font-family: "AutoGate Tajawal", Tahoma, Arial, sans-serif;
+}
+html[dir="rtl"] input[type="email"], html[dir="rtl"] input[type="tel"], html[dir="rtl"] input[name="vin"] { direction: ltr; text-align: right; }
+html[lang="ar"] .typography { line-height: 1.9; }
+
+.autogate-brand { display: inline-flex; align-items: center; gap: 8px; direction: ltr; }
+.autogate-brand img:first-child { width: 34px; height: 32px; object-fit: contain; }
+.autogate-brand img:last-child { width: 92px; height: 32px; object-fit: contain; }
+.mobile-logo .autogate-brand img { height: 24px; }
+
+.vehicle-model-options { position: relative; min-width: 0; }
+.vehicle-model-options > summary { cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.vehicle-model-options[open] { z-index: 10; }
+.vehicle-model-options__list { position: absolute; inset-inline-start: 0; top: 100%; width: max-content; min-width: 100%; max-width: min(90vw, 420px); max-height: 260px; overflow: auto; background: #fff; color: $autogate-coffee; box-shadow: 0 6px 18px #0003; border-radius: 3px; }
+.vehicle-model-options__list button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 8px 12px; border: 0; background: #fff; color: inherit; text-align: start; }
+.vehicle-model-options__list button:hover, .vehicle-model-options__list button:focus-visible, .vehicle-model-options__list button[aria-pressed='true'] { background: #f1f1f1; }
+.block-finder:has(.vehicle-model-options[open]) { overflow: visible; z-index: 3; }
+.vehicle-model-options__list { overscroll-behavior: contain; }
+.vehicle-model-options__list button > img { flex: 0 0 36px; }
+.vehicle-model-options summary > img { margin-inline-end: .35rem; vertical-align: middle; }
+.autogate-brand__names { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
+.autogate-brand__names bdi { color: inherit; font-family: "AutoGate Tajawal", Tahoma, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.15; }
+.autogate-brand .autogate-brand__wordmark { width: 80px; height: 22px; object-fit: contain; }
+.mobile-logo .autogate-brand .autogate-brand__wordmark { width: 60px; height: 16px; }
+.mobile-logo .autogate-brand__names bdi { font-size: 14px; }
+
+
+.card, .form-control, .payment-methods__item, .product-card {
+    border-color: var(--autogate-border);
+}
+a:focus-visible, button:focus-visible, summary:focus-visible, .form-control:focus {
+    outline: 2px solid var(--autogate-link);
+    outline-offset: 2px;
+}
+.btn-primary, .block-finder__button {
+    font-weight: 700;
+}
+.vehicle-model-options__list {
+    background: var(--autogate-surface);
+}
+.vehicle-model-options__list button:hover,
+.vehicle-model-options__list button:focus-visible,
+.vehicle-model-options__list button[aria-pressed='true'] {
+    background: #fff4ea;
+}
+
+.part-menu-thumbnail { margin-inline-end: 6px; object-fit: contain; vertical-align: middle; background: #fff; }
+
+.selected-vehicle-identity {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+.selected-vehicle-identity__engine {
+    display: block;
+    font-size: .85em;
+}
+.selected-vehicle-identity > img + .selected-vehicle-identity__fallback {
+    display: none;
+}
+.catalog-vehicle-context {
+    margin-block-end: .75rem;
+    padding: .5rem .75rem;
+    background: var(--autogate-surface);
+    border: 1px solid var(--autogate-border);
+    border-radius: 3px;
+}
+
+.departments__megamenu .megamenu__image {
+    width: 24%;
+    pointer-events: none;
+}
+.departments__megamenu .megamenu__image img {
+    max-width: 100%;
+    height: auto;
+}
+.departments__megamenu .megamenu__image + .row {
+    position: relative;
+}
+.departments__megamenu--size--xl .megamenu__image {
+    width: 20%;
+}
