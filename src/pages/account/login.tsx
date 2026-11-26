@@ -61,7 +61,7 @@ function Page() {
                                                 className={classNames('form-control', {
                                                     'is-invalid': signInForm.errors.email,
                                                 })}
-                                                placeholder={l10n("customer@example.com")}
+                                                autoComplete="email"
                                                 {...signInForm.register('email', {
                                                     required: true,
                                                     validate: { email: validateEmail },
@@ -149,7 +149,7 @@ function Page() {
                                                 className={classNames('form-control', {
                                                     'is-invalid': signUpForm.errors.email,
                                                 })}
-                                                placeholder={l10n("customer@example.com")}
+                                                autoComplete="email"
                                                 {...signUpForm.register('email', {
                                                     required: true,
                                                     validate: { email: validateEmail },
@@ -232,6 +232,9 @@ function Page() {
                 </div>
             </div>
 
+            <p className="container small" role="note">
+                <FormattedMessage id="ERROR_API_AUTH_UNAVAILABLE" />
+            </p>
             <BlockSpace layout="before-footer" />
         </React.Fragment>
     );

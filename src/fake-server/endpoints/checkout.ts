@@ -24,8 +24,8 @@ export function checkout(data: ICheckoutData): Promise<IOrder> {
     const items: IOrderItem[] = data.items.map((x) => {
         const product = products.find((p) => p.id === x.productId);
 
-        if (!product) {
-            throw new Error('Product not found');
+        if (!product || product.price <= 0 || product.stock === 'out-of-stock') {
+            throw new Error('Product unavailable for checkout');
         }
 
         return {
@@ -45,7 +45,7 @@ export function checkout(data: ICheckoutData): Promise<IOrder> {
         },
         {
             title: 'TAX',
-            price: subtotal * 0.20,
+            price: subtotal * 0.15,
         },
     ];
     const total = subtotal + totals.reduce((acc, x) => acc + x.price, 0);

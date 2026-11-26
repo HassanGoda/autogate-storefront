@@ -4,4 +4,6 @@ export interface IPost {
     image: string;
     categories: string[];
     date: string;
+    officialPath?: string;
+    summary?: string;
 }

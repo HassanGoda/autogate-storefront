@@ -4,16 +4,11 @@ import { translateText } from '~/services/i18n/localize';
 // application
 import { AbstractFilterBuilder } from '~/fake-server/filters/abstract-filter-builder';
 import { CategoryFilterBuilder } from '~/fake-server/filters/category-filter-builder';
-import { CheckFilterBuilder } from '~/fake-server/filters/check-filter-builder';
-import { ColorFilterBuilder } from '~/fake-server/filters/color-filter-builder';
 import { getNextReviewId, reviews } from '~/fake-server/database/reviews';
 import { IProductsList, IProduct } from '~/interfaces/product';
 import { IReview } from '~/interfaces/review';
 import { prepareCategory } from '~/fake-server/endpoints/categories';
 import { products as dbProducts } from '~/fake-server/database/products';
-import { RadioFilterBuilder } from '~/fake-server/filters/radio-filter-builder';
-import { RangeFilterBuilder } from '~/fake-server/filters/range-filter-builder';
-import { RatingFilterBuilder } from '~/fake-server/filters/rating-filter-builder';
 import { shopCategoriesList } from '~/fake-server/database/categories';
 import { VehicleFilterBuilder } from '~/fake-server/filters/vehicle-filter-builder';
 import {
@@ -36,19 +31,12 @@ import {
 } from '~/api/base';
 
 function getProducts(shift: number, categorySlug: string | null = null): IProduct[] {
-    let shiftValue = shift;
+    const list = categorySlug
+        ? dbProducts.filter((product) => product.categories?.some((category) => category.slug === categorySlug))
+        : dbProducts;
+    const offset = list.length ? shift % list.length : 0;
 
-    switch (categorySlug) {
-    case 'tires-wheels':
-    case 'power-tools': shiftValue += 5; break;
-    case 'interior-parts':
-    case 'hand-tools': shiftValue += 10; break;
-    case 'engine-drivetrain':
-    case 'plumbing': shiftValue += 15; break;
-    default:
-    }
-
-    return [...dbProducts.slice(shiftValue), ...dbProducts.slice(0, shiftValue)];
+    return [...list.slice(offset), ...list.slice(0, offset)];
 }
 
 function normalizeSearch(value: string): string {
@@ -65,7 +53,12 @@ function matchesSearch(value: string, query: string): boolean {
 }
 
 function matchesProduct(product: IProduct, query: string): boolean {
-    return [product.name, product.sku || '', product.partNumber || ''].some((text) => matchesSearch(text, query));
+    const compact = (value: string) => normalizeSearch(value).replace(/[\s._/-]+/g, '');
+    const code = compact(query);
+    const numbers = [product.sku, product.partNumber];
+    return matchesSearch(product.name, query) || (!!code && numbers.some(
+        (number) => !!number && compact(number).includes(code),
+    ));
 }
 
 export function getProductsList(
@@ -75,11 +68,6 @@ export function getProductsList(
     const filters: AbstractFilterBuilder[] = [
         new CategoryFilterBuilder('category', 'Categories'),
         new VehicleFilterBuilder('vehicle', 'Vehicle'),
-        new RangeFilterBuilder('price', 'Price'),
-        new CheckFilterBuilder('brand', 'Brand'),
-        new RadioFilterBuilder('discount', 'With Discount'),
-        new RatingFilterBuilder('rating', 'Rating'),
-        new ColorFilterBuilder('color', 'Color'),
     ];
 
     let products = filterValues.query ? dbProducts.filter((product) => matchesProduct(product, filterValues.query)) : dbProducts.slice(0);

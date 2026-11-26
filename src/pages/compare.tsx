@@ -1,3 +1,4 @@
+import ProductPrice from '~/components/shared/ProductPrice';
 import { useLocalize } from '~/services/i18n/localize';
 // react
 import React, { useMemo, useState } from 'react';
@@ -10,7 +11,6 @@ import AppLink from '~/components/shared/AppLink';
 import AsyncAction from '~/components/shared/AsyncAction';
 import BlockHeader from '~/components/blocks/BlockHeader';
 import BlockSpace from '~/components/blocks/BlockSpace';
-import CurrencyFormat from '~/components/shared/CurrencyFormat';
 import PageTitle from '~/components/shared/PageTitle';
 import Rating from '~/components/shared/Rating';
 import StockStatusBadge from '~/components/shared/StockStatusBadge';
@@ -160,10 +160,10 @@ function Page() {
                 </th>
                 {l10n(compare.items.map((product) => (
                     <td key={product.id} className="compare-table__column compare-table__column--product">
-                        <StockStatusBadge
+                        {product.price > 0 && <StockStatusBadge
                             stock={product.stock}
                             className="product__stock"
-                        />
+                        />}
                     </td>
                 )))}
                 <td className="compare-table__column compare-table__column--fake" />
@@ -174,7 +174,7 @@ function Page() {
                 </th>
                 {l10n(compare.items.map((product) => (
                     <td key={product.id} className="compare-table__column compare-table__column--product">
-                        <CurrencyFormat value={product.price} />
+                        <ProductPrice value={product.price} />
                     </td>
                 )))}
                 <td className="compare-table__column compare-table__column--fake" />

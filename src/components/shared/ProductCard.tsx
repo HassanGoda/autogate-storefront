@@ -1,3 +1,4 @@
+import ProductPrice from '~/components/shared/ProductPrice';
 import { useLocalize } from '~/services/i18n/localize';
 // react
 import React from 'react';
@@ -181,7 +182,7 @@ function ProductCard(props: Props) {
                     {l10n(product.compareAtPrice !== null && (
                         <React.Fragment>
                             <div className="product-card__price product-card__price--new">
-                                <CurrencyFormat value={product.price} />
+                                <ProductPrice value={product.price} />
                             </div>
                             <div className="product-card__price product-card__price--old">
                                 <CurrencyFormat value={product.compareAtPrice} />
@@ -190,7 +191,7 @@ function ProductCard(props: Props) {
                     ))}
                     {l10n(product.compareAtPrice === null && (
                         <div className="product-card__price product-card__price--current">
-                            <CurrencyFormat value={product.price} />
+                            <ProductPrice value={product.price} />
                         </div>
                     ))}
                 </div>
@@ -205,6 +206,7 @@ function ProductCard(props: Props) {
                                         'product-card__addtocart-icon--loading': loading,
                                     })}
                                     aria-label={l10n(intl.formatMessage({ id: 'BUTTON_ADD_TO_CART' }))}
+                                    disabled={product.price <= 0}
                                     onClick={run}
                                 >
                                     <Cart20Svg />
@@ -221,7 +223,8 @@ function ProductCard(props: Props) {
                                             className={classNames('product-card__addtocart-full', {
                                                 'product-card__addtocart-full--loading': loading,
                                             })}
-                                            onClick={run}
+                                            disabled={product.price <= 0}
+                                    onClick={run}
                                         >
                                             <FormattedMessage id="BUTTON_ADD_TO_CART" />
                                         </button>

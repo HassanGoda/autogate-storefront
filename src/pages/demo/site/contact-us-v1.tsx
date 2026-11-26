@@ -1,6 +1,7 @@
 import { useLocalize } from '~/services/i18n/localize';
 // react
 import React from 'react';
+import { useIntl } from 'react-intl';
 // application
 import BlockHeader from '~/components/blocks/BlockHeader';
 import BlockMap from '~/components/blocks/BlockMap';
@@ -11,6 +12,7 @@ import theme from '~/data/theme';
 
 function Page() {
     const l10n = useLocalize();
+    const { locale } = useIntl();
 
     return (
         <React.Fragment>
@@ -37,19 +39,14 @@ function Page() {
                                     <div className="mr-1">
                                         <h4 className="contact-us__header card-title">{l10n("Our Address")}</h4>
 
-                                        <div className="contact-us__address">
-                                            <p>{l10n("715 Fake Ave, Apt. 34, New York, NY 10021 USA")}<br />
-                                                {l10n(`${l10n('Email')}: ${theme.contacts.email[0]}`)}
-                                                <br />{l10n("Phone Number: +1 754 000-00-00")}</p>
-
-                                            <p>
-                                                <strong>{l10n("Opening Hours")}</strong>
-                                                <br />{l10n("Monday to Friday: 8am-8pm")}<br />{l10n("Saturday: 8am-6pm")}<br />{l10n("Sunday: 10am-4pm")}</p>
-
-                                            <p>
-
-                                                <strong>{l10n("Comment")}</strong>
-                                                <br />{l10n("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit suscipit mi, non tempor nulla finibus eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")}</p>
+                                        <div className="contact-us__address" id="branches">
+                                            <p>{l10n(theme.contacts.address[0])}</p>
+                                            <p><a href={`tel:${theme.contacts.phone[0]}`}>{theme.contacts.phone[0]}</a></p>
+                                            <ul>
+                                                {theme.contacts.email.map((email) => <li key={email}><a href={`mailto:${email}`}>{email}</a></li>)}
+                                            </ul>
+                                            <p>{l10n(theme.contacts.hours[0])}</p>
+                                            <p><a href={`https://autogate.sa/${locale}/contact-us#branches-section`}>{l10n('View AutoGate branches')}</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -58,13 +55,19 @@ function Page() {
                                     <div className="ml-1">
                                         <h4 className="contact-us__header card-title">{l10n("Leave us a Message")}</h4>
 
-                                        <form>
+                                        <form onSubmit={(event) => {
+                                            event.preventDefault();
+                                            const fields = new FormData(event.currentTarget);
+                                            const subject = encodeURIComponent(String(fields.get('subject') || ''));
+                                            const body = encodeURIComponent(`${fields.get('message')}\n\n${fields.get('name')} — ${fields.get('email')}`);
+                                            window.location.href = `mailto:${theme.contacts.email[0]}?subject=${subject}&body=${body}`;
+                                        }}>
                                             <div className="form-row">
                                                 <div className="form-group col-md-6">
                                                     <label htmlFor="form-name">{l10n("Your Name")}</label>
                                                     <input
                                                         type="text"
-                                                        id="form-name"
+                                                        id="form-name" name="name" required
                                                         className="form-control"
                                                         placeholder={l10n("Your Name")}
                                                     />
@@ -73,7 +76,7 @@ function Page() {
                                                     <label htmlFor="form-email">{l10n("Email")}</label>
                                                     <input
                                                         type="email"
-                                                        id="form-email"
+                                                        id="form-email" name="email" required
                                                         className="form-control"
                                                         placeholder={l10n("Email Address")}
                                                     />
@@ -83,7 +86,7 @@ function Page() {
                                                 <label htmlFor="form-subject">{l10n("Subject")}</label>
                                                 <input
                                                     type="text"
-                                                    id="form-subject"
+                                                    id="form-subject" name="subject" required
                                                     className="form-control"
                                                     placeholder={l10n("Subject")}
                                                 />
@@ -91,7 +94,7 @@ function Page() {
                                             <div className="form-group">
                                                 <label htmlFor="form-message">{l10n("Message")}</label>
                                                 <textarea
-                                                    id="form-message"
+                                                    id="form-message" name="message" required
                                                     className="form-control"
                                                     rows={4}
                                                 />

@@ -1,14 +1,14 @@
 const theme = {
     name: 'AutoGate',
     author: {
-        name: 'Kos',
-        profile_url: 'https://themeforest.net/user/kos9',
+        name: 'hassan',
+        profile_url: 'https://autogate.sa/ar',
     },
     contacts: {
-        address: ['715 Fake Street, New York 10021 USA'],
-        email: ['autogate@example.com'],
-        phone: ['+1 (800) 060-07-30'],
-        hours: ['Mon-Sat 10:00pm - 7:00pm'],
+        address: ['Dammam, Riyadh, Buraydah and Jeddah'],
+        email: ['info@autogate-sa.com', 'Spareparts@autogate-sa.com', 'Service@autogate-sa.com'],
+        phone: ['920028300'],
+        hours: ['Contact your branch to confirm working hours.'],
     },
 };
 

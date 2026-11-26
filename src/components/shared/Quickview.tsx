@@ -1,3 +1,4 @@
+import ProductPrice from '~/components/shared/ProductPrice';
 import { useLocalize } from '~/services/i18n/localize';
 // react
 import React, { useCallback, useMemo } from 'react';
@@ -117,17 +118,17 @@ function Quickview() {
                                 <CurrencyFormat value={product.compareAtPrice} />
                             </div>
                             <div className="quickview__product-price quickview__product-price--new">
-                                <CurrencyFormat value={product.price} />
+                                <ProductPrice value={product.price} />
                             </div>
                         </React.Fragment>
                     ))}
                     {l10n(product.compareAtPrice === null && (
                         <div className="quickview__product-price quickview__product-price--current">
-                            <CurrencyFormat value={product.price} />
+                            <ProductPrice value={product.price} />
                         </div>
                     ))}
                 </div>
-                <StockStatusBadge className="quickview__product-stock" stock={product.stock} />
+                {product.price > 0 && <StockStatusBadge className="quickview__product-stock" stock={product.stock} />}
             </div>
 
             <ProductForm
@@ -152,7 +153,7 @@ function Quickview() {
                 </div>
                 <div className="quickview__product-actions-item quickview__product-actions-item--addtocart">
                     <button
-                        type="submit"
+                        type="submit" disabled={product.price <= 0}
                         className={classNames('btn', 'btn-primary', 'btn-block', {
                             'btn-loading': productForm.submitInProgress,
                         })}

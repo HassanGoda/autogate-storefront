@@ -22,9 +22,9 @@ export function useSignUpForm(options: ISignUpFormOptions = {}) {
     const [serverError, setServerError] = useState<string | null>(null);
     const methods = useForm<ISignUpForm>({
         defaultValues: {
-            email: 'user@example.com',
-            password: '123456',
-            confirmPassword: '123456',
+            email: '',
+            password: '',
+            confirmPassword: '',
         },
     });
     const { handleSubmit } = methods;

@@ -40,6 +40,8 @@ function ShopPageShop(props: Props) {
     } = props;
     const intl = useIntl();
     const router = useRouter();
+    const term = router.query.filter_query;
+    const isVin = typeof term === 'string' && /^[A-HJ-NPR-Z0-9]{17}$/i.test(term.trim());
     const shopState = useShop();
 
     // Replace current url.
@@ -110,6 +112,11 @@ function ShopPageShop(props: Props) {
 
                             <div className="block-split__item block-split__item-content col-auto flex-grow-1">
                                 <div className="block">
+                                    {isVin && (
+                                        <p className="alert alert-info" role="status">
+                                            {intl.formatMessage({ id: 'TEXT_ALERT_UNABLE_TO_FIND_VEHICLE_BY_VIN' })}
+                                        </p>
+                                    )}
                                     <CatalogVehicleContext />
                                     <ProductsView
                                         layout={layout}

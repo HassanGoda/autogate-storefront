@@ -1,6 +1,8 @@
 import { useLocalize } from '~/services/i18n/localize';
 // react
 import React from 'react';
+import { useIntl } from 'react-intl';
+import faq from '~/data/autogate-company-faq.json';
 // application
 import AppLink from '~/components/shared/AppLink';
 import BlockSpace from '~/components/blocks/BlockSpace';
@@ -9,6 +11,7 @@ import url from '~/services/url';
 
 function Page() {
     const l10n = useLocalize();
+    const isArabic = useIntl().locale === 'ar';
 
     return (
         <React.Fragment>
@@ -22,99 +25,22 @@ function Page() {
                         <h1 className="faq__header-title">{l10n("Frequently Asked Questions")}</h1>
                     </div>
 
-                    <div className="faq__section">
-                        <h3 className="faq__section-title">{l10n("Shipping Information")}</h3>
-                        <div className="faq__section-body">
-
-                            <div className="faq__question">
-                                <h5 className="faq__question-title">{l10n("What shipping methods are available?")}</h5>
-                                <div className="faq__question-answer">
-                                    <div className="typography">
-                                        <p>{l10n("Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")}</p>
+                    {faq.map(([heading, headingAr, questions]) => (
+                        <div className="faq__section" key={heading as string}>
+                            <h3 className="faq__section-title">{(isArabic ? headingAr : heading) as string}</h3>
+                            <div className="faq__section-body">
+                                {(questions as string[][]).map(([question, questionAr, answer, answerAr]) => (
+                                    <div className="faq__question" key={question}>
+                                        <h5 className="faq__question-title">{isArabic ? questionAr : question}</h5>
+                                        <div className="faq__question-answer">
+                                            <div className="typography"><p>{isArabic ? answerAr : answer}</p></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="faq__question">
-                                <h5 className="faq__question-title">{l10n("Do you ship internationally?")}</h5>
-                                <div className="faq__question-answer">
-                                    <div className="typography">
-                                        <p>{l10n("Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="faq__question">
-                                <h5 className="faq__question-title">{l10n("How might I obtain an estimated date of delivery?")}</h5>
-                                <div className="faq__question-answer">
-                                    <div className="typography">
-                                        <p>{l10n("Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="faq__question">
-                                <h5 className="faq__question-title">{l10n("Can I split my order to ship to different locations?")}</h5>
-                                <div className="faq__question-answer">
-                                    <div className="typography">
-                                        <p>{l10n("Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")}</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
-                    </div>
-
-                    <div className="faq__section">
-                        <h3 className="faq__section-title">{l10n("Payment Information")}</h3>
-                        <div className="faq__section-body">
-                            <div className="faq__question">
-                                <h5 className="faq__question-title">{l10n("What payments methods are available?")}</h5>
-                                <div className="faq__question-answer">
-                                    <div className="typography">
-                                        <p>{l10n("Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="faq__question">
-                                <h5 className="faq__question-title">{l10n("Can I split my payment?")}</h5>
-                                <div className="faq__question-answer">
-                                    <div className="typography">
-                                        <p>{l10n("Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="faq__section">
-                        <h3 className="faq__section-title">{l10n("Orders and Returns")}</h3>
-                        <div className="faq__section-body">
-                            <div className="faq__question">
-                                <h5 className="faq__question-title">{l10n("How do I return or exchange an item?")}</h5>
-                                <div className="faq__question-answer">
-                                    <div className="typography">
-                                        <p>{l10n("Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="faq__question">
-                                <h5 className="faq__question-title">{l10n("How do I cancel an order?")}</h5>
-                                <div className="faq__question-answer">
-                                    <div className="typography">
-                                        <p>{l10n("Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="faq__footer">
-                        <div className="faq__footer-title">{l10n("Still Have A Questions?")}</div>
-                        <div className="faq__footer-subtitle">{l10n("We will be happy to answer any questions you may have.")}</div>
-                        <AppLink href={url.pageContactUs()} className="btn btn-primary">{l10n("Contact Us")}</AppLink>
-                    </div>
+                    ))}
+                    <AppLink href={url.pageContactUs()}>{l10n('Contact Us')}</AppLink>
                 </div>
             </div>
 

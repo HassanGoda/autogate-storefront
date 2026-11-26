@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useIntl } from 'react-intl';
 import models from '~/data/autogate-vehicles.json';
 import VehicleMakeLogo from './VehicleMakeLogo';
+import { translateText } from '~/services/i18n/localize';
 
 interface Props {
     make: string;
@@ -38,9 +39,9 @@ function modelArabic(model: string) {
 export default function VehicleModelOptions({ make, value, options, placeholder, disabled, onChange, brands = false }: Props) {
     const { locale } = useIntl();
     const details = useRef<HTMLDetailsElement>(null);
-    const brand = models.find((row) => row.make === make);
+    const makeArabic = (name: string) => models.find((row) => row.make.toLowerCase() === name.toLowerCase())?.makeAr || translateText(name, 'ar');
     const renderName = (model: string) => {
-        const arabic = brands ? models.find((row) => row.make === model)?.makeAr || model : [brand?.makeAr, modelArabic(model)].filter(Boolean).join(' ');
+        const arabic = brands ? makeArabic(model) : [makeArabic(make), modelArabic(translateText(model, 'ar'))].filter(Boolean).join(' ');
         const english = brands ? model : [make, model].filter(Boolean).join(' ');
         return <><bdi dir="rtl" lang="ar">{arabic}</bdi> <span aria-hidden="true">·</span> <bdi dir="ltr" lang="en">{english}</bdi></>;
     };

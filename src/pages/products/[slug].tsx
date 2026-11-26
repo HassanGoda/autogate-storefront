@@ -15,11 +15,15 @@ interface Props {
 export const getServerSideProps: GetServerSideProps<Props> = async ({ params }) => {
     const slug = typeof params?.slug === 'string' ? params?.slug : null;
 
-    return {
-        props: {
-            product: slug ? await shopApi.getProductBySlug(slug) : null,
-        },
-    };
+    if (!slug) return { notFound: true };
+
+    try {
+        const product = await shopApi.getProductBySlug(slug);
+        return product ? { props: { product } } : { notFound: true };
+    } catch (error) {
+        if (error instanceof Error && error.message === 'Page Not Found') return { notFound: true };
+        throw error;
+    }
 };
 
 function Page(props: Props) {

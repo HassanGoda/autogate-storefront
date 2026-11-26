@@ -3,14 +3,60 @@
     {
       "name": "Engine Parts",
       "slug": "ag-engine-parts",
-      "items": 3,
-      "image": "/images/autogate-parts/ag-engine-parts.jpg"
+      "items": 4,
+      "image": "/images/autogate-parts/ag-engine-parts.jpg",
+      "children": [
+        {
+          "slug": "ag-spark-plugs",
+          "name": "Spark Plugs",
+          "items": 1
+        },
+        {
+          "slug": "ag-o2-sensors",
+          "name": "Oxygen Sensors",
+          "items": 0
+        },
+        {
+          "slug": "ag-timing-belts",
+          "name": "Timing Belts",
+          "items": 0
+        },
+        {
+          "slug": "ag-exhaust",
+          "name": "Exhaust",
+          "items": 0
+        }
+      ],
+      "layout": "categories"
     },
     {
       "name": "Body Parts",
       "slug": "ag-body-parts",
       "items": 2,
-      "image": "/images/autogate-parts/ag-body-parts.jpg"
+      "image": "/images/autogate-parts/ag-body-parts.jpg",
+      "children": [
+        {
+          "slug": "ag-bumpers",
+          "name": "Bumpers",
+          "items": 0
+        },
+        {
+          "slug": "ag-hoods",
+          "name": "Hoods",
+          "items": 0
+        },
+        {
+          "slug": "ag-grilles",
+          "name": "Front Grilles",
+          "items": 0
+        },
+        {
+          "slug": "ag-door-handles",
+          "name": "Door Handles",
+          "items": 1
+        }
+      ],
+      "layout": "categories"
     },
     {
       "name": "Electrical",
@@ -35,65 +81,238 @@
       "slug": "ag-others",
       "items": 0,
       "image": "/images/autogate-parts/ag-others.jpg"
+    },
+    {
+      "slug": "ag-lighting",
+      "name": "Lighting",
+      "items": 2,
+      "children": [
+        {
+          "slug": "ag-headlights",
+          "name": "Headlights",
+          "items": 1
+        },
+        {
+          "slug": "ag-taillights",
+          "name": "Tail Lights",
+          "items": 1
+        },
+        {
+          "slug": "ag-fog-lights",
+          "name": "Fog Lights",
+          "items": 0
+        },
+        {
+          "slug": "ag-turn-signals",
+          "name": "Turn Signals",
+          "items": 0
+        },
+        {
+          "slug": "ag-relays-switches",
+          "name": "Switches & Relays",
+          "items": 0
+        }
+      ],
+      "layout": "categories"
+    },
+    {
+      "slug": "ag-brakes",
+      "name": "Brakes & Suspension",
+      "items": 3,
+      "children": [
+        {
+          "slug": "ag-brake-discs",
+          "name": "Brake Discs",
+          "items": 1
+        },
+        {
+          "slug": "ag-brake-pads",
+          "name": "Brake Pads",
+          "items": 1
+        },
+        {
+          "slug": "ag-hubs",
+          "name": "Wheel Hubs",
+          "items": 0
+        },
+        {
+          "slug": "ag-shock-absorbers",
+          "name": "Shock Absorbers",
+          "items": 1
+        },
+        {
+          "slug": "ag-ball-joints",
+          "name": "Ball Joints",
+          "items": 0
+        },
+        {
+          "slug": "ag-air-suspension",
+          "name": "Air Suspension",
+          "items": 0
+        }
+      ],
+      "layout": "categories"
+    },
+    {
+      "slug": "ag-interior",
+      "name": "Interior",
+      "items": 1,
+      "children": [
+        {
+          "slug": "ag-floor-mats",
+          "name": "Floor Mats",
+          "items": 1
+        },
+        {
+          "slug": "ag-steering-wheels",
+          "name": "Steering Wheels",
+          "items": 0
+        },
+        {
+          "slug": "ag-gauges",
+          "name": "Gauges",
+          "items": 0
+        },
+        {
+          "slug": "ag-consoles",
+          "name": "Consoles & Organizers",
+          "items": 0
+        }
+      ],
+      "layout": "categories"
+    },
+    {
+      "slug": "ag-filters",
+      "name": "Filters",
+      "items": 2,
+      "children": [
+        {
+          "slug": "ag-air-filters",
+          "name": "Air Filters",
+          "items": 1
+        },
+        {
+          "slug": "ag-oil-filters",
+          "name": "Oil Filters",
+          "items": 1
+        },
+        {
+          "slug": "ag-cabin-filters",
+          "name": "Cabin Filters",
+          "items": 0
+        }
+      ],
+      "layout": "categories"
+    },
+    {
+      "slug": "ag-oils",
+      "name": "Oils",
+      "items": 1,
+      "children": [
+        {
+          "slug": "ag-engine-oil",
+          "name": "Engine Oils",
+          "items": 1
+        },
+        {
+          "slug": "ag-gear-oil",
+          "name": "Transmission Fluids",
+          "items": 0
+        }
+      ],
+      "layout": "categories"
+    },
+    {
+      "slug": "ag-tires",
+      "name": "Tires & Wheels",
+      "items": 0
+    },
+    {
+      "slug": "ag-clutch",
+      "name": "Clutches",
+      "items": 0
+    },
+    {
+      "slug": "ag-fuel",
+      "name": "Fuel Systems",
+      "items": 0
+    },
+    {
+      "slug": "ag-steering",
+      "name": "Steering",
+      "items": 0
+    },
+    {
+      "slug": "ag-transmission",
+      "name": "Transmission",
+      "items": 0
+    },
+    {
+      "slug": "ag-tools",
+      "name": "Tools & Workshop",
+      "items": 0
     }
   ],
   "products": [
     {
       "name": "Engine Oil Filter",
       "slug": "ag-engine-oil-filter",
-      "sku": "AG-DEMO-001",
-      "price": 41.39,
+      "sku": "AG-REF-001",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-engine-oil-filter.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
-        "ag-engine-parts"
+        "ag-engine-parts",
+        "ag-oil-filters"
       ],
       "compatibility": "unknown",
-      "description": "High quality engine oil filter for optimal engine protection",
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
       "badges": [
-        "sale",
         "featured"
-      ],
-      "compareAtPrice": 45.99
+      ]
     },
     {
       "name": "Spark Plugs Set",
       "slug": "ag-spark-plugs-set",
-      "sku": "AG-DEMO-002",
-      "price": 89.99,
+      "sku": "AG-REF-002",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-spark-plugs-set.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
-        "ag-engine-parts"
+        "ag-engine-parts",
+        "ag-spark-plugs"
       ],
       "compatibility": "unknown",
-      "description": "Set of 4 high-performance spark plugs",
-      "badges": []
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": [
+        "featured"
+      ]
     },
     {
       "name": "Air Filter",
       "slug": "ag-air-filter",
-      "sku": "AG-DEMO-003",
-      "price": 32.5,
+      "sku": "AG-REF-003",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-air-filter.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
-        "ag-engine-parts"
+        "ag-engine-parts",
+        "ag-air-filters"
       ],
       "compatibility": "unknown",
-      "description": "Engine air filter for improved performance",
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
       "badges": [
         "featured"
       ]
@@ -101,160 +320,209 @@
     {
       "name": "Car Door Handle",
       "slug": "ag-car-door-handle",
-      "sku": "AG-DEMO-004",
-      "price": 25.99,
+      "sku": "AG-REF-004",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-car-door-handle.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
-        "ag-body-parts"
+        "ag-body-parts",
+        "ag-door-handles"
       ],
       "compatibility": "unknown",
-      "description": "Exterior door handle replacement",
-      "badges": []
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": [
+        "featured"
+      ]
     },
     {
       "name": "Headlight Assembly",
       "slug": "ag-headlight-assembly",
-      "sku": "AG-DEMO-005",
-      "price": 161.49,
+      "sku": "AG-REF-005",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-headlight-assembly.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
-        "ag-body-parts"
+        "ag-body-parts",
+        "ag-headlights"
       ],
       "compatibility": "unknown",
-      "description": "Complete headlight assembly with bulb",
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
       "badges": [
-        "sale",
         "featured"
-      ],
-      "compareAtPrice": 189.99
+      ]
     },
     {
       "name": "Car Battery",
       "slug": "ag-car-battery",
-      "sku": "AG-DEMO-006",
-      "price": 299.99,
+      "sku": "AG-REF-006",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-car-battery.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
         "ag-electrical"
       ],
       "compatibility": "unknown",
-      "description": "12V car battery with high capacity",
-      "badges": [
-        "featured"
-      ]
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": []
     },
     {
       "name": "Alternator",
       "slug": "ag-alternator",
-      "sku": "AG-DEMO-007",
-      "price": 332.49,
+      "sku": "AG-REF-007",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-alternator.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
         "ag-electrical"
       ],
       "compatibility": "unknown",
-      "description": "Car alternator for charging system",
-      "badges": [
-        "sale"
-      ],
-      "compareAtPrice": 349.99
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": []
     },
     {
       "name": "Brake Pad Set",
       "slug": "ag-brake-pad-set",
-      "sku": "AG-DEMO-008",
-      "price": 79.99,
+      "sku": "AG-REF-008",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-brake-pad-set.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
-        "ag-suspension"
+        "ag-suspension",
+        "ag-brake-pads"
       ],
       "compatibility": "unknown",
-      "description": "High quality brake pads for optimal stopping power",
-      "badges": [
-        "featured"
-      ]
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": []
     },
     {
       "name": "Shock Absorber",
       "slug": "ag-shock-absorber",
-      "sku": "AG-DEMO-009",
-      "price": 129.99,
+      "sku": "AG-REF-009",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-shock-absorber.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
-        "ag-suspension"
+        "ag-suspension",
+        "ag-shock-absorbers"
       ],
       "compatibility": "unknown",
-      "description": "Front shock absorber for smooth ride",
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
       "badges": []
     },
     {
       "name": "Car Floor Mats",
       "slug": "ag-car-floor-mats",
-      "sku": "AG-DEMO-010",
-      "price": 39.99,
+      "sku": "AG-REF-010",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-car-floor-mats.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
-        "ag-accessories"
+        "ag-accessories",
+        "ag-floor-mats"
       ],
       "compatibility": "unknown",
-      "description": "Universal fit car floor mats",
-      "badges": [
-        "sale",
-        "featured"
-      ],
-      "compareAtPrice": 49.99
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": []
     },
     {
       "name": "Phone Mount",
       "slug": "ag-phone-mount",
-      "sku": "AG-DEMO-011",
-      "price": 24.99,
+      "sku": "AG-REF-011",
+      "price": 0,
       "images": [
         "/images/autogate-parts/ag-phone-mount.jpg"
       ],
       "rating": 0,
       "reviews": 0,
-      "availability": "in-stock",
+      "availability": "out-of-stock",
       "categories": [
         "ag-accessories"
       ],
       "compatibility": "unknown",
-      "description": "Dashboard phone mount with holder",
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": []
+    },
+    {
+      "name": "Motor Oil",
+      "slug": "ag-motor-oil",
+      "sku": "AG-REF-012",
+      "price": 0,
+      "images": [
+        "/images/products/product-6-1.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "out-of-stock",
+      "categories": [
+        "ag-engine-parts",
+        "ag-engine-oil"
+      ],
+      "compatibility": "unknown",
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": []
+    },
+    {
+      "name": "Brake Disc and Pad Kit",
+      "slug": "ag-brake-discs",
+      "sku": "AG-REF-013",
+      "price": 0,
+      "images": [
+        "/images/products/product-2-1.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "out-of-stock",
+      "categories": [
+        "ag-brake-discs"
+      ],
+      "compatibility": "unknown",
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+      "badges": []
+    },
+    {
+      "name": "Tail Light Assembly",
+      "slug": "ag-taillights",
+      "sku": "AG-REF-014",
+      "price": 0,
+      "images": [
+        "/images/products/product-11-1.jpg"
+      ],
+      "rating": 0,
+      "reviews": 0,
+      "availability": "out-of-stock",
+      "categories": [
+        "ag-taillights"
+      ],
+      "compatibility": "unknown",
+      "description": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
       "badges": []
     }
   ]

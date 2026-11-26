@@ -13,7 +13,7 @@ interface Props {
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => ({
     props: {
-        product: await shopApi.getProductBySlug('brandix-brake-kit-bdx-750z370-s'),
+        product: await shopApi.getProductBySlug('ag-engine-oil-filter'),
     },
 });
 

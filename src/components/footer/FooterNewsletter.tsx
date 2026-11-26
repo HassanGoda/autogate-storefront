@@ -13,6 +13,8 @@ const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = (
 
     const handleFormSubmit = (event: React.FormEvent) => {
         event.preventDefault();
+        const email = new FormData(event.currentTarget as HTMLFormElement).get('email');
+        window.location.href = `mailto:info@autogate-sa.com?subject=AutoGate%20newsletter&body=${encodeURIComponent(String(email || ''))}`;
     };
 
     return (
@@ -30,7 +32,7 @@ const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = (
                 </label>
                 <input
                     id="footer-newsletter-address"
-                    type="text"
+                    type="email" name="email" required
                     className="footer-newsletter__form-input"
                     placeholder={l10n(intl.formatMessage({ id: 'INPUT_EMAIL_ADDRESS_PLACEHOLDER' }))}
                 />

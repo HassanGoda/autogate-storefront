@@ -11,7 +11,6 @@ import AppSlick, { ISlickProps } from '~/components/shared/AppSlick';
 import Arrow from '~/components/shared/Arrow';
 import Decor from '~/components/shared/Decor';
 import ProductCard from '~/components/shared/ProductCard';
-import Timer from '~/components/shared/Timer';
 import { baseUrl } from '~/services/utils';
 import { IProduct } from '~/interfaces/product';
 
@@ -65,9 +64,6 @@ function BlockSale(props: Props) {
                     <div className="block-sale__subtitle">
                         <FormattedMessage id="HEADER_DEAL_ZONE_SUBTITLE" />
                     </div>
-                    <div className="block-sale__timer">
-                        <Timer time={3 * 24 * 60 * 60} />
-                    </div>
                     <div className="block-sale__controls">
                         <Arrow
                             className="block-sale__arrow block-sale__arrow--prev"
@@ -75,8 +71,8 @@ function BlockSale(props: Props) {
                             onClick={handlePrevClick}
                         />
                         <div className="block-sale__link">
-                            <AppLink href="/">
-                                <FormattedMessage id="LINK_VIEW_ALL_AVAILABLE_OFFERS" />
+                            <AppLink href="/catalog/products">
+                                <FormattedMessage id="LINK_SHOP" />
                             </AppLink>
                         </div>
                         <Arrow
@@ -91,7 +87,7 @@ function BlockSale(props: Props) {
                     <Decor type="bottom" className="block-sale__body-decor" />
                     <div
                         className="block-sale__image"
-                        style={{ backgroundImage: `url(${baseUrl('/images/sale.jpg')})` }}
+                        style={{ backgroundImage: `url(${baseUrl('/images/autogate-official/parts-hero.webp')})` }}
                     />
                     <div className="block-sale__loader" />
                     <div className="container">

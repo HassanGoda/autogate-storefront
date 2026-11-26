@@ -8,7 +8,8 @@ import AppLink from '~/components/shared/AppLink';
 import BlockSpace from '~/components/blocks/BlockSpace';
 import BlogSidebar from '~/components/blog/BlogSidebar';
 import Decor from '~/components/shared/Decor';
-import Post from '~/components/blog/Post';
+import stories from '~/data/autogate-company-stories.json';
+import { useIntl } from 'react-intl';
 import { baseUrl } from '~/services/utils';
 import { IBlogPageSidebarPosition } from '~/interfaces/pages';
 
@@ -19,6 +20,8 @@ interface Props {
 
 function BlogPagePost(props: Props) {
     const l10n = useLocalize();
+    const { locale } = useIntl();
+    const story = stories[0];
 
     const { featuredImage = false, sidebarPosition = false } = props;
 
@@ -33,7 +36,7 @@ function BlogPagePost(props: Props) {
                     {l10n(featuredImage && (
                         <div
                             className="post-header__image"
-                            style={{ backgroundImage: `url(${baseUrl('/images/posts/post-1.jpg')})` }}
+                            style={{ backgroundImage: `url(${baseUrl(story.image)})` }}
                         />
                     ))}
 
@@ -45,19 +48,7 @@ function BlogPagePost(props: Props) {
                                 </li>
                             </ul>
                         </div>
-                        <h1 className="post-header__title">{l10n("Morbi Interdum Velit Quis Magna Placerat Lobortis Eget")}</h1>
-                        <div className="post-header__meta">
-                            <ul className="post-header__meta-list">
-                                <li className="post-header__meta-item">
-                                    {l10n('By ')}
-                                    <AppLink href="/" className="post-header__meta-link">{l10n("Jessica Moore")}</AppLink>
-                                </li>
-                                <li className="post-header__meta-item">{l10n("November 30, 2018")}</li>
-                                <li className="post-header__meta-item">
-                                    <AppLink href="/" className="post-header__meta-link">{l10n("4 Comments")}</AppLink>
-                                </li>
-                            </ul>
-                        </div>
+                        <h1 className="post-header__title">{l10n(story.title)}</h1>
                     </div>
                     <Decor type="bottom" className="post-header__decor" />
                 </div>
@@ -69,7 +60,10 @@ function BlogPagePost(props: Props) {
                                 <BlogSidebar />
                             </div>
                         ))}
-                        <Post className="post-view__item post-view__item-post" />
+                        <article className="post-view__item post-view__item-post">
+                            <p>{l10n(story.summary)}</p>
+                            <AppLink href={`https://autogate.sa/${locale}${story.officialPath}`}>{l10n('Read more')}</AppLink>
+                        </article>
                         {l10n(sidebarPosition === 'end' && (
                             <div className="post-view__item post-view__item-sidebar">
                                 <BlogSidebar />

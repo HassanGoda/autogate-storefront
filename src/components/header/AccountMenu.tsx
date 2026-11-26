@@ -62,7 +62,7 @@ function AccountMenu(props: Props) {
                             className={classNames('form-control', 'form-control-sm', {
                                 'is-invalid': signInForm.errors.email,
                             })}
-                            placeholder={l10n("customer@example.com")}
+                            autoComplete="email"
                             {...signInForm.register('email', { required: true, validate: { email: validateEmail } })}
                         />
                         <div className="invalid-feedback">

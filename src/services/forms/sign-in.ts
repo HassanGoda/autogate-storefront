@@ -22,8 +22,8 @@ export function useSignInForm(options: ISignInFormOptions = {}) {
     const [serverError, setServerError] = useState<string | null>(null);
     const methods = useForm<ISignInForm>({
         defaultValues: {
-            email: 'autogate@example.com',
-            password: '123456',
+            email: '',
+            password: '',
             remember: false,
         },
     });

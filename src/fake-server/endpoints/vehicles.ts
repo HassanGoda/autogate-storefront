@@ -4,15 +4,7 @@ import { IVehicle } from '~/interfaces/vehicle';
 import { userVehicles, vehicles } from '~/fake-server/database/vehicles';
 
 export function getYears(): Promise<number[]> {
-    const result: number[] = [];
-
-    vehicles.forEach((vehicle) => {
-        if (result.indexOf(vehicle.year) === -1) {
-            result.push(vehicle.year);
-        }
-    });
-
-    return delayResponse(Promise.resolve(result.sort()), 750);
+    return Promise.resolve(Array.from({ length: 20 }, (_, index) => 2027 - index));
 }
 
 export function getMakes(year: number): Promise<string[]> {
@@ -24,7 +16,7 @@ export function getMakes(year: number): Promise<string[]> {
         }
     });
 
-    return delayResponse(Promise.resolve(result.sort()), 750);
+    return Promise.resolve(result.sort((a, b) => a.localeCompare(b)));
 }
 
 export function getModels(year: number, make: string): Promise<string[]> {
@@ -36,25 +28,17 @@ export function getModels(year: number, make: string): Promise<string[]> {
         }
     });
 
-    return delayResponse(Promise.resolve(result.sort()), 750);
+    return Promise.resolve(result.sort((a, b) => a.localeCompare(b)));
 }
 
 export function getVehicles(year: number, make: string, model: string): Promise<IVehicle[]> {
     const result = vehicles.filter((x) => x.year === year && x.make === make && x.model === model);
 
-    return delayResponse(Promise.resolve(result.sort()), 750);
+    return Promise.resolve(result.sort((a, b) => a.engine.localeCompare(b.engine, undefined, { numeric: true })));
 }
 
-export function getVehicleByVin(vin: string): Promise<IVehicle> {
-    const vinValue = vin.trim();
-
-    const vehicle = vehicles.find((x) => x.model === 'Focus S');
-
-    if (vinValue === '' || vinValue === 'error' || !vehicle) {
-        return error('Page Not Found');
-    }
-
-    return Promise.resolve(vehicle);
+export function getVehicleByVin(_vin: string): Promise<IVehicle> {
+    return error('Page Not Found');
 }
 
 export function getUserVehicles(): Promise<IVehicle[]> {

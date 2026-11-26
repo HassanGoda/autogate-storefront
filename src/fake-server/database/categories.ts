@@ -18,7 +18,7 @@ function makeShopCategory(def: ICategoryDef, parent: IShopCategory | null): ISho
         name: def.name,
         slug: def.slug,
         image: def.image || null,
-        items: def.items,
+        items: 0,
         parent,
         children: [],
         layout: def.layout ? def.layout : 'products',
@@ -71,12 +71,11 @@ function flatTree<T extends ICategory>(categories: T[]): T[] {
 }
 
 const shopCategoriesDef: ICategoryDef[] = [
-    ...catalog.categories,
+    ...catalog.categories.map((category): ICategoryDef => ({ ...category, layout: category.layout === 'categories' ? 'categories' : 'products' })),
     {
         name: 'Headlights & Lighting',
         slug: 'headlights-lighting',
         image: '/images/categories/category-1.jpg',
-        items: 131,
         children: [
             { name: 'Turn Signals', slug: 'turn-signals' },
             { name: 'Fog Lights', slug: 'fog-lights' },
@@ -92,7 +91,6 @@ const shopCategoriesDef: ICategoryDef[] = [
         name: 'Fuel System',
         slug: 'fuel-system',
         image: '/images/categories/category-2.jpg',
-        items: 356,
         children: [
             { name: 'Fuel Pumps', slug: 'fuel-pumps' },
             { name: 'Motor Oil', slug: 'motor-oil' },
@@ -105,7 +103,6 @@ const shopCategoriesDef: ICategoryDef[] = [
         name: 'Body Parts',
         slug: 'body-parts',
         image: '/images/categories/category-3.jpg',
-        items: 54,
         children: [
             { name: 'Bumpers', slug: 'bumpers' },
             { name: 'Hoods', slug: 'hoods' },
@@ -118,7 +115,6 @@ const shopCategoriesDef: ICategoryDef[] = [
         name: 'Interior Parts',
         slug: 'interior-parts',
         image: '/images/categories/category-4.jpg',
-        items: 274,
         children: [
             { name: 'Dashboards', slug: 'dashboards' },
             { name: 'Seat Covers', slug: 'seat-covers' },
@@ -133,7 +129,6 @@ const shopCategoriesDef: ICategoryDef[] = [
         name: 'Tires & Wheels',
         slug: 'tires-wheels',
         image: '/images/categories/category-5.jpg',
-        items: 508,
         children: [
             { name: 'Wheel Covers', slug: 'wheel-covers' },
             { name: 'Brake Kits', slug: 'brake-kits' },
@@ -148,7 +143,6 @@ const shopCategoriesDef: ICategoryDef[] = [
         name: 'Engine & Drivetrain',
         slug: 'engine-drivetrain',
         image: '/images/categories/category-6.jpg',
-        items: 95,
         children: [
             { name: 'Timing Belts', slug: 'timing-belts' },
             { name: 'Spark Plugs', slug: 'spark-plugs' },
@@ -163,13 +157,11 @@ const shopCategoriesDef: ICategoryDef[] = [
         name: 'Oils & Lubricants',
         slug: 'oils-lubricants',
         image: '/images/categories/category-7.jpg',
-        items: 179,
     },
     {
         name: 'Tools & Garage',
         slug: 'tools-garage',
         image: '/images/categories/category-8.jpg',
-        items: 106,
     },
 ];
 
@@ -233,6 +225,11 @@ const blogCategoriesDef: ICategoryDef[] = [
 export const shopCategoriesTree: IShopCategory[] = makeCategories(makeShopCategory, shopCategoriesDef);
 
 export const shopCategoriesList: IShopCategory[] = flatTree(shopCategoriesTree);
+
+for (const category of shopCategoriesList) {
+    const slugs = new Set(flatTree([category]).map((node) => node.slug));
+    category.items = catalog.products.filter((part) => part.categories.some((slug) => slugs.has(slug))).length;
+}
 
 export const blogCategoriesTree: IBlogCategory[] = makeCategories(makeBlogCategory, blogCategoriesDef);
 

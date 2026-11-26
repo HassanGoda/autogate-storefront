@@ -13,8 +13,18 @@ export class CategoryFilterBuilder extends AbstractFilterBuilder {
 
     private items: IShopCategory[] = [];
 
-    test(): boolean {
-        return true;
+    test(product: IProduct): boolean {
+        const slug = this.value;
+        if (!slug) return true;
+
+        return product.categories?.some((category) => {
+            let item: IShopCategory | null = category;
+            while (item) {
+                if (item.slug === slug) return true;
+                item = item.parent || null;
+            }
+            return false;
+        }) || false;
     }
 
     makeItems(products: IProduct[], value: string): void {

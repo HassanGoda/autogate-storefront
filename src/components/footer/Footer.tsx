@@ -29,13 +29,13 @@ export function Footer() {
                                 className="site-footer__widget"
                                 header={<FormattedMessage id="HEADER_INFORMATION" />}
                                 links={[
-                                    { title: <FormattedMessage id="LINK_ABOUT_US" /> },
-                                    { title: <FormattedMessage id="LINK_DELIVERY_INFORMATION" /> },
-                                    { title: <FormattedMessage id="LINK_PRIVACY_POLICY" /> },
-                                    { title: <FormattedMessage id="LINK_BRANDS" /> },
-                                    { title: <FormattedMessage id="LINK_CONTACT_US" /> },
-                                    { title: <FormattedMessage id="LINK_RETURNS" /> },
-                                    { title: <FormattedMessage id="LINK_SITE_MAP" /> },
+                                    { title: <FormattedMessage id="LINK_ABOUT_US" />, url: "/about-us" },
+                                    { title: <FormattedMessage id="LINK_DELIVERY_INFORMATION" />, url: "/terms#delivery" },
+                                    { title: <FormattedMessage id="LINK_PRIVACY_POLICY" />, url: "/terms#privacy" },
+                                    { title: <FormattedMessage id="LINK_BRANDS" />, url: "/vehicle-catalog" },
+                                    { title: <FormattedMessage id="LINK_CONTACT_US" />, url: "/contact-us" },
+                                    { title: <FormattedMessage id="LINK_RETURNS" />, url: "/terms#returns" },
+                                    { title: <FormattedMessage id="LINK_SITE_MAP" />, url: "/terms#site-map" },
                                 ]}
                             />
                         </div>
@@ -44,17 +44,16 @@ export function Footer() {
                                 className="site-footer__widget"
                                 header={<FormattedMessage id="HEADER_MY_ACCOUNT" />}
                                 links={[
-                                    { title: <FormattedMessage id="LINK_STORE_LOCATION" /> },
-                                    { title: <FormattedMessage id="LINK_ORDER_HISTORY" /> },
-                                    { title: <FormattedMessage id="LINK_WISH_LIST" /> },
-                                    { title: <FormattedMessage id="LINK_NEWSLETTER" /> },
-                                    { title: <FormattedMessage id="LINK_SPECIAL_OFFERS" /> },
-                                    { title: <FormattedMessage id="LINK_GIFT_CERTIFICATES" /> },
-                                    { title: <FormattedMessage id="LINK_AFFILIATE" /> },
+                                    { title: <FormattedMessage id="LINK_STORE_LOCATION" />, url: "/contact-us#branches" },
+                                    { title: <FormattedMessage id="LINK_ORDER_HISTORY" />, url: "/account/orders" },
+                                    { title: <FormattedMessage id="LINK_WISH_LIST" />, url: "/wishlist" },
+                                    { title: <FormattedMessage id="LINK_NEWSLETTER" />, url: "/#newsletter" },
+                                    { title: <FormattedMessage id="LINK_SHOP" />, url: "/catalog/products" },
+                                    { title: <FormattedMessage id="LINK_CONTACT_US" />, url: "/contact-us" },
                                 ]}
                             />
                         </div>
-                        <div className="col-12 col-md-6 col-xl-4">
+                        <div className="col-12 col-md-6 col-xl-4" id="newsletter">
                             <FooterNewsletter className="site-footer__widget" />
                         </div>
                     </div>

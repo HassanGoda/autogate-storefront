@@ -24,15 +24,16 @@ const FooterContacts: FunctionComponent<React.HTMLAttributes<HTMLElement>> = () 
                     <FormattedMessage id="TEXT_PHONE_NUMBER" />
                 </dt>
                 {theme.contacts.phone.map((item, index) => (
-                    <dd key={index}>{l10n(item)}</dd>
+                    <dd key={index}><a href={`tel:${item}`}>{item}</a></dd>
                 ))}
+                <dd><a href="https://wa.me/920028300" target="_blank" rel="noopener noreferrer">{l10n('WhatsApp')}</a></dd>
             </dl>
             <dl>
                 <dt>
                     <FormattedMessage id="TEXT_EMAIL_ADDRESS" />
                 </dt>
                 {theme.contacts.email.map((item, index) => (
-                    <dd key={index}>{l10n(item)}</dd>
+                    <dd key={index}><a href={`mailto:${item}`}>{item}</a></dd>
                 ))}
             </dl>
             <dl>

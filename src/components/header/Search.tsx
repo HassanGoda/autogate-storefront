@@ -1,3 +1,4 @@
+import ProductPrice from '~/components/shared/ProductPrice';
 import SelectedVehicleIdentity from '~/components/shared/SelectedVehicleIdentity';
 import { useRouter } from 'next/router';
 import VehicleMakeLogo from '~/components/shared/VehicleMakeLogo';
@@ -11,7 +12,6 @@ import classNames from 'classnames';
 import AppImage from '~/components/shared/AppImage';
 import AppLink from '~/components/shared/AppLink';
 import AsyncAction from '~/components/shared/AsyncAction';
-import CurrencyFormat from '~/components/shared/CurrencyFormat';
 import RadioButton from '~/components/shared/RadioButton';
 import Rating from '~/components/shared/Rating';
 import url from '~/services/url';
@@ -64,6 +64,14 @@ export function Search() {
             canceled = true;
         };
 
+        if (!value.trim()) {
+            setHasSuggestions(false);
+            setProducts([]);
+            setCategories([]);
+            setQuery(value);
+            return;
+        }
+
         shopApi.getSearchSuggestions(value, {
             limitProducts: 3,
             limitCategories: 4,
@@ -74,12 +82,20 @@ export function Search() {
 
             if (result.products.length === 0 && result.categories.length === 0) {
                 setHasSuggestions(false);
+                setProducts([]);
+                setCategories([]);
                 return;
             }
 
             setHasSuggestions(true);
             setProducts(result.products);
             setCategories(result.categories);
+        }).catch(() => {
+            if (!canceled) {
+                setHasSuggestions(false);
+                setProducts([]);
+                setCategories([]);
+            }
         });
 
         setQuery(value);
@@ -285,7 +301,7 @@ export function Search() {
                                             </div>
                                         </div>
                                         <div className=" suggestions__product-price">
-                                            <CurrencyFormat value={product.price} />
+                                            <ProductPrice value={product.price} />
                                         </div>
 
                                     </AppLink>

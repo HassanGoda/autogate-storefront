@@ -53,7 +53,7 @@ export function cartAddItem(
     options: ICartItemOption[] = [],
     quantity = 1,
 ): CartThunkAction<Promise<void>> {
-    // sending request to server, timeout is used as a stub
+    if (product.price <= 0 || product.stock === 'out-of-stock') return () => Promise.resolve();
     return (dispatch) => (
         new Promise((resolve) => {
             setTimeout(() => {

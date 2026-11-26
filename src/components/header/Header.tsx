@@ -80,7 +80,7 @@ function Header() {
                             <div className="phone__title">
                                 <FormattedMessage id="TEXT_CALL_US" />
                             </div>
-                            <div className="phone__number">800 060-0730</div>
+                            <div className="phone__number">920028300</div>
                         </AppLink>
                     </div>
                 ))}

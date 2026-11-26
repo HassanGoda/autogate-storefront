@@ -1,15 +1,15 @@
 const theme = {
-    name: 'RedParts',
+    name: 'Autogate',
     url: 'https://themeforest.net/item/redparts-auto-parts-react-ecommerce-template/28404847',
     author: {
-        name: 'Kos',
-        profile_url: 'https://themeforest.net/user/kos9',
+        name: 'hassan',
+        profile_url: 'https://autogate.sa/ar',
     },
     contacts: {
         address: ['715 Fake Street, New York 10021 USA'],
-        email: ['red-parts@example.com'],
-        phone: ['+1 (800) 060-07-30'],
-        hours: ['Mon-Sat 10:00pm - 7:00pm'],
+        email: ['info@autogate-sa.com'],
+        phone: ['+966 920028300'],
+        hours: [' 7:00pm -12:00pm'],
     },
 };
 

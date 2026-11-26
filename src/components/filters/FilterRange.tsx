@@ -37,9 +37,18 @@ function FilterRange(props: Props) {
     const [stateFrom, stateTo] = state;
     const direction = useDirection();
 
-    let { min, max } = options;
-    let from = Math.max(getFirstValidValue(stateFrom, propsFrom, min)!, min);
-    let to = Math.min(getFirstValidValue(stateTo, propsTo, max)!, max);
+    // Defensive normalization: an empty or malformed catalogue must never show
+    // an inverted price range or crash the slider (including in RTL mode).
+    const rawMin = Number.isFinite(options.min) ? options.min : 0;
+    const rawMax = Number.isFinite(options.max) ? options.max : rawMin;
+    let min = Math.min(rawMin, rawMax);
+    let max = Math.max(rawMin, rawMax);
+    // react-input-range requires a non-zero interval.
+    if (min === max) max = min + 1;
+    const clamp = (amount: number) => Math.min(max, Math.max(min, amount));
+    let from = clamp(getFirstValidValue(stateFrom, propsFrom, min)!);
+    let to = clamp(getFirstValidValue(stateTo, propsTo, max)!);
+    if (from > to) [from, to] = [to, from];
     let fromLabel = from;
     let toLabel = to;
 
@@ -66,6 +75,7 @@ function FilterRange(props: Props) {
 
         // This is needed to fix a bug in react-input-range.
         [newFrom, newTo] = [Math.max(newFrom, min), Math.min(newTo, max)];
+        if (newFrom > newTo) [newFrom, newTo] = [newTo, newFrom];
 
         // since react-input-range does not support RTL direction,
         // we just need to invert and swipe values

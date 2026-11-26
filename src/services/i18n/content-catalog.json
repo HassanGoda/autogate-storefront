@@ -1153,7 +1153,7 @@
   },
   "Motor Oil": {
     "en": "Motor Oil",
-    "ar": "زيت المحرك"
+    "ar": "زيوت المحرك"
   },
   "Gas Caps": {
     "en": "Gas Caps",
@@ -2241,7 +2241,7 @@
   },
   "City": {
     "en": "City",
-    "ar": "المدينة"
+    "ar": "سيتي"
   },
   "Houston": {
     "en": "Houston",
@@ -3313,7 +3313,7 @@
   },
   "Engine Parts": {
     "en": "Engine Parts",
-    "ar": "قطع غيار المحرك"
+    "ar": "المحرك"
   },
   "All engine related spare parts": {
     "en": "All engine related spare parts",
@@ -3694,5 +3694,1153 @@
   "1.5 L petrol · 3 cylinders · Dual VVT-i": {
     "en": "1.5 L petrol · 3 cylinders · Dual VVT-i",
     "ar": "بنزين 1.5 لتر · 3 أسطوانات · Dual VVT-i"
+  },
+  "Dammam, Riyadh, Buraydah and Jeddah": {
+    "en": "Dammam, Riyadh, Buraydah and Jeddah",
+    "ar": "الدمام والرياض وبريدة وجدة"
+  },
+  "Contact your branch to confirm working hours.": {
+    "en": "Contact your branch to confirm working hours.",
+    "ar": "تواصل مع الفرع لتأكيد ساعات العمل."
+  },
+  "View AutoGate branches": {
+    "en": "View AutoGate branches",
+    "ar": "عرض فروع أوتوجيت"
+  },
+  "AutoGate vehicle care": {
+    "en": "AutoGate vehicle care",
+    "ar": "العناية بالسيارات لدى أوتوجيت"
+  },
+  "Explore window tinting, paint protection and detailing.": {
+    "en": "Explore window tinting, paint protection and detailing.",
+    "ar": "تعرّف على خدمات التظليل وحماية الطلاء والتلميع."
+  },
+  "About AutoGate Cars": {
+    "en": "About AutoGate Cars",
+    "ar": "عن شركة أوتوجيت للسيارات"
+  },
+  "Learn about AutoGate and its automotive services in Saudi Arabia.": {
+    "en": "Learn about AutoGate and its automotive services in Saudi Arabia.",
+    "ar": "تعرّف على شركة أوتوجيت وخدماتها للسيارات في المملكة."
+  },
+  "Branches and support": {
+    "en": "Branches and support",
+    "ar": "الفروع والدعم"
+  },
+  "Find AutoGate branches and contact the team.": {
+    "en": "Find AutoGate branches and contact the team.",
+    "ar": "اطّلع على فروع أوتوجيت وتواصل مع فريقها."
+  },
+  "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.": {
+    "en": "Reference listing. Contact AutoGate to confirm the part number, compatibility, price and availability.",
+    "ar": "عرض مرجعي للقطعة. تواصل مع أوتوجيت لتأكيد رقم القطعة والتوافق والسعر والتوفر."
+  },
+  "KIA": {
+    "en": "KIA",
+    "ar": "كيا"
+  },
+  "JAC": {
+    "en": "JAC",
+    "ar": "جاك"
+  },
+  "Bentley": {
+    "en": "Bentley",
+    "ar": "بنتلي"
+  },
+  "Lexus": {
+    "en": "Lexus",
+    "ar": "لكزس"
+  },
+  "ROX": {
+    "en": "ROX",
+    "ar": "روكس"
+  },
+  "ZX Auto": {
+    "en": "ZX Auto",
+    "ar": "زد إكس أوتو"
+  },
+  "GEELY": {
+    "en": "GEELY",
+    "ar": "جيلي"
+  },
+  "Dongfeng": {
+    "en": "Dongfeng",
+    "ar": "دونغ فينغ"
+  },
+  "JEEP": {
+    "en": "JEEP",
+    "ar": "جيب"
+  },
+  "FOTON": {
+    "en": "FOTON",
+    "ar": "فوتون"
+  },
+  "SsangYong": {
+    "en": "SsangYong",
+    "ar": "سانغ يونغ"
+  },
+  "Great Wall Motors": {
+    "en": "Great Wall Motors",
+    "ar": "جريت وول موتورز"
+  },
+  "Mahindra": {
+    "en": "Mahindra",
+    "ar": "ماهيندرا"
+  },
+  "RIDDARA": {
+    "en": "RIDDARA",
+    "ar": "ريدّارا"
+  },
+  "GAC": {
+    "en": "GAC",
+    "ar": "جي إيه سي"
+  },
+  "ISUZU": {
+    "en": "ISUZU",
+    "ar": "إيسوزو"
+  },
+  "JAECOO": {
+    "en": "JAECOO",
+    "ar": "جايكو"
+  },
+  "HAVAL": {
+    "en": "HAVAL",
+    "ar": "هافال"
+  },
+  "MG": {
+    "en": "MG",
+    "ar": "إم جي"
+  },
+  "212": {
+    "en": "212",
+    "ar": "212"
+  },
+  "JUNFENG": {
+    "en": "JUNFENG",
+    "ar": "جونفنغ"
+  },
+  "Engine not listed": {
+    "en": "Engine not listed",
+    "ar": "المحرك غير مذكور في المصدر"
+  },
+  "Land Cruiser": {
+    "en": "Land Cruiser",
+    "ar": "لاند كروزر"
+  },
+  "Land Cruiser Prado": {
+    "en": "Land Cruiser Prado",
+    "ar": "لاند كروزر برادو"
+  },
+  "Hilux": {
+    "en": "Hilux",
+    "ar": "هايلكس"
+  },
+  "Fortuner": {
+    "en": "Fortuner",
+    "ar": "فورتشنر"
+  },
+  "Yaris": {
+    "en": "Yaris",
+    "ar": "يارس"
+  },
+  "Yaris Sedan": {
+    "en": "Yaris Sedan",
+    "ar": "يارس"
+  },
+  "Patrol": {
+    "en": "Patrol",
+    "ar": "باترول"
+  },
+  "Sunny": {
+    "en": "Sunny",
+    "ar": "صني"
+  },
+  "Maxima": {
+    "en": "Maxima",
+    "ar": "ماكسيما"
+  },
+  "Sentra": {
+    "en": "Sentra",
+    "ar": "سنترا"
+  },
+  "X-Trail": {
+    "en": "X-Trail",
+    "ar": "إكس تريل"
+  },
+  "Tucson": {
+    "en": "Tucson",
+    "ar": "توسان"
+  },
+  "Sonata": {
+    "en": "Sonata",
+    "ar": "سوناتا"
+  },
+  "Elantra": {
+    "en": "Elantra",
+    "ar": "النترا"
+  },
+  "Santa Fe": {
+    "en": "Santa Fe",
+    "ar": "سانتا في"
+  },
+  "Pajero": {
+    "en": "Pajero",
+    "ar": "باجيرو"
+  },
+  "Outlander": {
+    "en": "Outlander",
+    "ar": "أوتلاندر"
+  },
+  "Sportage": {
+    "en": "Sportage",
+    "ar": "سبورتاج"
+  },
+  "Sorento": {
+    "en": "Sorento",
+    "ar": "سورينتو"
+  },
+  "Tahoe": {
+    "en": "Tahoe",
+    "ar": "تاهو"
+  },
+  "Yukon": {
+    "en": "Yukon",
+    "ar": "يوكن"
+  },
+  "Silverado": {
+    "en": "Silverado",
+    "ar": "سيلفرادو"
+  },
+  "Sierra": {
+    "en": "Sierra",
+    "ar": "سييرا"
+  },
+  "Explorer": {
+    "en": "Explorer",
+    "ar": "إكسبلورر"
+  },
+  "Expedition": {
+    "en": "Expedition",
+    "ar": "إكسبيديشن"
+  },
+  "Taurus": {
+    "en": "Taurus",
+    "ar": "توروس"
+  },
+  "Territory": {
+    "en": "Territory",
+    "ar": "تيريتوري"
+  },
+  "Everest": {
+    "en": "Everest",
+    "ar": "إيفرست"
+  },
+  "Ranger": {
+    "en": "Ranger",
+    "ar": "رينجر"
+  },
+  "Mercedes Benz": {
+    "en": "Mercedes Benz",
+    "ar": "مرسيدس-بنز"
+  },
+  "Volkswagen": {
+    "en": "Volkswagen",
+    "ar": "فولكس واجن"
+  },
+  "Subaru": {
+    "en": "Subaru",
+    "ar": "سوبارو"
+  },
+  "Infiniti": {
+    "en": "Infiniti",
+    "ar": "إنفينيتي"
+  },
+  "Porsche": {
+    "en": "Porsche",
+    "ar": "بورشه"
+  },
+  "Genesis": {
+    "en": "Genesis",
+    "ar": "جينيسيس"
+  },
+  "Ram": {
+    "en": "Ram",
+    "ar": "رام"
+  },
+  "Great Wall": {
+    "en": "Great Wall",
+    "ar": "جريت وول"
+  },
+  "1.8 L · I4": {
+    "en": "1.8 L · I4",
+    "ar": "1.8 لتر · I4"
+  },
+  "1.5 L · I4 · PHEV": {
+    "en": "1.5 L · I4 · PHEV",
+    "ar": "1.5 لتر · I4 · PHEV"
+  },
+  "2.7 L · I4 · Petrol": {
+    "en": "2.7 L · I4 · Petrol",
+    "ar": "2.7L I4 بنزين"
+  },
+  "2.4 L · I4 · Petrol": {
+    "en": "2.4 L · I4 · Petrol",
+    "ar": "2.4 لتر · I4 · بنزين"
+  },
+  "2.5 L · I4": {
+    "en": "2.5 L · I4",
+    "ar": "2.5 لتر · I4"
+  },
+  "1.6 L · I4 · Petrol": {
+    "en": "1.6 L · I4 · Petrol",
+    "ar": "1.6 لتر · I4 · بنزين"
+  },
+  "2.5 L · I4 · Petrol": {
+    "en": "2.5 L · I4 · Petrol",
+    "ar": "2.5L I4 بنزين"
+  },
+  "1.5 L · I3 · Petrol": {
+    "en": "1.5 L · I3 · Petrol",
+    "ar": "1.5L I3 بنزين"
+  },
+  "4.6 L · V8": {
+    "en": "4.6 L · V8",
+    "ar": "4.6 لتر · V8"
+  },
+  "6.2 L · V8": {
+    "en": "6.2 L · V8",
+    "ar": "6.2 لتر · V8"
+  },
+  "1.2 L · I3 · Petrol": {
+    "en": "1.2 L · I3 · Petrol",
+    "ar": "1.2 لتر · I3 · بنزين"
+  },
+  "1.3 L · I4 · Petrol": {
+    "en": "1.3 L · I4 · Petrol",
+    "ar": "1.3 لتر · I4 · بنزين"
+  },
+  "3.6 L · V6": {
+    "en": "3.6 L · V6",
+    "ar": "3.6 لتر · V6"
+  },
+  "2.5 L · I4 · Hybrid": {
+    "en": "2.5 L · I4 · Hybrid",
+    "ar": "2.5L I4 هايبرد"
+  },
+  "3.0 L · V6 · Petrol": {
+    "en": "3.0 L · V6 · Petrol",
+    "ar": "3.0 لتر · V6 · بنزين"
+  },
+  "5.6 L · V8 · Petrol": {
+    "en": "5.6 L · V8 · Petrol",
+    "ar": "5.6 لتر · V8 · بنزين"
+  },
+  "2.8 L · I4 · Diesel": {
+    "en": "2.8 L · I4 · Diesel",
+    "ar": "2.8 لتر · I4 · ديزل"
+  },
+  "2.4 L · I4": {
+    "en": "2.4 L · I4",
+    "ar": "2.4 لتر · I4"
+  },
+  "2.7 L · I4": {
+    "en": "2.7 L · I4",
+    "ar": "2.7 لتر · I4"
+  },
+  "1.4 L · I4 · Petrol": {
+    "en": "1.4 L · I4 · Petrol",
+    "ar": "1.4 لتر · I4 · بنزين"
+  },
+  "5.7 L · V8": {
+    "en": "5.7 L · V8",
+    "ar": "5.7 لتر · V8"
+  },
+  "2.4 L · I4 · Diesel": {
+    "en": "2.4 L · I4 · Diesel",
+    "ar": "2.4 لتر · I4 · ديزل"
+  },
+  "4.0 L · V6": {
+    "en": "4.0 L · V6",
+    "ar": "4.0 لتر · V6"
+  },
+  "1.0 L · I3 · Petrol": {
+    "en": "1.0 L · I3 · Petrol",
+    "ar": "1.0 لتر · I3 · بنزين"
+  },
+  "3.5 L · V6": {
+    "en": "3.5 L · V6",
+    "ar": "3.5 لتر · V6"
+  },
+  "4.0 L · V6 · Petrol": {
+    "en": "4.0 L · V6 · Petrol",
+    "ar": "4.0 لتر · V6 · بنزين"
+  },
+  "5.3 L · V8 · Petrol": {
+    "en": "5.3 L · V8 · Petrol",
+    "ar": "5.3 لتر · V8 · بنزين"
+  },
+  "Electric": {
+    "en": "Electric",
+    "ar": "كهربائي"
+  },
+  "3.5 L · V6 · Petrol": {
+    "en": "3.5 L · V6 · Petrol",
+    "ar": "3.5 لتر · V6 · بنزين"
+  },
+  "3.8 L · V6 · Petrol": {
+    "en": "3.8 L · V6 · Petrol",
+    "ar": "3.8 لتر · V6 · بنزين"
+  },
+  "6.2 L · V8 · Petrol": {
+    "en": "6.2 L · V8 · Petrol",
+    "ar": "6.2 لتر · V8 · بنزين"
+  },
+  "1.6 L · I4": {
+    "en": "1.6 L · I4",
+    "ar": "1.6 لتر · I4"
+  },
+  "5.6 L · V8": {
+    "en": "5.6 L · V8",
+    "ar": "5.6 لتر · V8"
+  },
+  "1.5 L · I4 · Petrol": {
+    "en": "1.5 L · I4 · Petrol",
+    "ar": "1.5L I4 بنزين"
+  },
+  "3.8 L · V6": {
+    "en": "3.8 L · V6",
+    "ar": "3.8 لتر · V6"
+  },
+  "2.0 L · I4": {
+    "en": "2.0 L · I4",
+    "ar": "2.0 لتر · I4"
+  },
+  "2.0 L · I4 · Petrol": {
+    "en": "2.0 L · I4 · Petrol",
+    "ar": "2.0 لتر · I4 · بنزين"
+  },
+  "1.2 L · I4 · Petrol": {
+    "en": "1.2 L · I4 · Petrol",
+    "ar": "1.2 لتر · I4 · بنزين"
+  },
+  "5.4 L · V8": {
+    "en": "5.4 L · V8",
+    "ar": "5.4 لتر · V8"
+  },
+  "5.4 L · V8 · Petrol": {
+    "en": "5.4 L · V8 · Petrol",
+    "ar": "5.4 لتر · V8 · بنزين"
+  },
+  "2.7 L · V6": {
+    "en": "2.7 L · V6",
+    "ar": "2.7 لتر · V6"
+  },
+  "4.8 L · I6": {
+    "en": "4.8 L · I6",
+    "ar": "4.8 لتر · I6"
+  },
+  "1.8 L · I4 · Petrol": {
+    "en": "1.8 L · I4 · Petrol",
+    "ar": "1.8 لتر · I4 · بنزين"
+  },
+  "2.2 L · I4 · Petrol": {
+    "en": "2.2 L · I4 · Petrol",
+    "ar": "2.2 لتر · I4 · بنزين"
+  },
+  "4.8 L · V8 · Petrol": {
+    "en": "4.8 L · V8 · Petrol",
+    "ar": "4.8 لتر · V8 · بنزين"
+  },
+  "3.2 L · V6": {
+    "en": "3.2 L · V6",
+    "ar": "3.2 لتر · V6"
+  },
+  "2.6 L · I4": {
+    "en": "2.6 L · I4",
+    "ar": "2.6 لتر · I4"
+  },
+  "1.5 L · I4": {
+    "en": "1.5 L · I4",
+    "ar": "1.5 لتر · I4"
+  },
+  "3.3 L · V6": {
+    "en": "3.3 L · V6",
+    "ar": "3.3 لتر · V6"
+  },
+  "3.6 L · V6 · Petrol": {
+    "en": "3.6 L · V6 · Petrol",
+    "ar": "3.6 لتر · V6 · بنزين"
+  },
+  "4.6 L · V8 · Petrol": {
+    "en": "4.6 L · V8 · Petrol",
+    "ar": "4.6 لتر · V8 · بنزين"
+  },
+  "4.7 L · V8": {
+    "en": "4.7 L · V8",
+    "ar": "4.7 لتر · V8"
+  },
+  "3.2 L · V6 · Petrol": {
+    "en": "3.2 L · V6 · Petrol",
+    "ar": "3.2 لتر · V6 · بنزين"
+  },
+  "5.3 L · V8": {
+    "en": "5.3 L · V8",
+    "ar": "5.3 لتر · V8"
+  },
+  "6.0 L · V8": {
+    "en": "6.0 L · V8",
+    "ar": "6.0 لتر · V8"
+  },
+  "4.5 L · I6 · Petrol": {
+    "en": "4.5 L · I6 · Petrol",
+    "ar": "4.5 لتر · I6 · بنزين"
+  },
+  "2.7 L · V6 · Petrol": {
+    "en": "2.7 L · V6 · Petrol",
+    "ar": "2.7 لتر · V6 · بنزين"
+  },
+  "Brakes": {
+    "en": "Brakes",
+    "ar": "فرامل"
+  },
+  "Lighting": {
+    "en": "Lighting",
+    "ar": "المصابيح والإضاءة"
+  },
+  "Company updates": {
+    "en": "Company updates",
+    "ar": "أخبار أوتوجيت"
+  },
+  "WhatsApp": {
+    "en": "WhatsApp",
+    "ar": "واتساب"
+  },
+  "Front Grilles": {
+    "en": "Front Grilles",
+    "ar": "الشبك الأمامي"
+  },
+  "Brake Pads": {
+    "en": "Brake Pads",
+    "ar": "أطقم فحمات الفرامل"
+  },
+  "Shock Absorbers": {
+    "en": "Shock Absorbers",
+    "ar": "ممتصات الصدمات"
+  },
+  "Interior": {
+    "en": "Interior",
+    "ar": "القطع الداخلية"
+  },
+  "Cabin Filters": {
+    "en": "Cabin Filters",
+    "ar": "فلاتر المكيف"
+  },
+  "Oils": {
+    "en": "Oils",
+    "ar": "الزيوت"
+  },
+  "Engine Oils": {
+    "en": "Engine Oils",
+    "ar": "زيوت المحركات"
+  },
+  "Transmission Fluids": {
+    "en": "Transmission Fluids",
+    "ar": "زيوت ناقل الحركة"
+  },
+  "Tools & Workshop": {
+    "en": "Tools & Workshop",
+    "ar": "الأدوات وتجهيزات الورش"
+  },
+  "Brake Disc and Pad Kit": {
+    "en": "Brake Disc and Pad Kit",
+    "ar": "طقم أقراص وفحمات فرامل"
+  },
+  "Tail Light Assembly": {
+    "en": "Tail Light Assembly",
+    "ar": "مجموعة مصباح خلفي"
+  },
+  "Forthing": {
+    "en": "Forthing",
+    "ar": "فورثينغ"
+  },
+  "Tank": {
+    "en": "Tank",
+    "ar": "تانك"
+  },
+  "Bestune": {
+    "en": "Bestune",
+    "ar": "بيستون"
+  },
+  "Hongqi": {
+    "en": "Hongqi",
+    "ar": "هونشي"
+  },
+  "Deepal": {
+    "en": "Deepal",
+    "ar": "ديبال"
+  },
+  "Exeed": {
+    "en": "Exeed",
+    "ar": "إكسيد"
+  },
+  "Lynk & Co": {
+    "en": "Lynk & Co",
+    "ar": "لينك آند كو"
+  },
+  "Zeekr": {
+    "en": "Zeekr",
+    "ar": "زيكر"
+  },
+  "Soueast": {
+    "en": "Soueast",
+    "ar": "ساوإيست"
+  },
+  "Kaiyi": {
+    "en": "Kaiyi",
+    "ar": "كايي"
+  },
+  "Skywell": {
+    "en": "Skywell",
+    "ar": "سكاي ويل"
+  },
+  "Leapmotor": {
+    "en": "Leapmotor",
+    "ar": "ليب موتور"
+  },
+  "Voyah": {
+    "en": "Voyah",
+    "ar": "فوياه"
+  },
+  "Denza": {
+    "en": "Denza",
+    "ar": "دينزا"
+  },
+  "Avatr": {
+    "en": "Avatr",
+    "ar": "أفاتر"
+  },
+  "iCAUR": {
+    "en": "iCAUR",
+    "ar": "آي كار"
+  },
+  "AION": {
+    "en": "AION",
+    "ar": "أيون"
+  },
+  "Aito": {
+    "en": "Aito",
+    "ar": "آيتو"
+  },
+  "XPeng": {
+    "en": "XPeng",
+    "ar": "إكس بنغ"
+  },
+  "NIO": {
+    "en": "NIO",
+    "ar": "نيو"
+  },
+  "Li Auto": {
+    "en": "Li Auto",
+    "ar": "لي أوتو"
+  },
+  "Riddara": {
+    "en": "Riddara",
+    "ar": "ريدّارا"
+  },
+  "Shine": {
+    "en": "Shine",
+    "ar": "شاين"
+  },
+  "Shine Max": {
+    "en": "Shine Max",
+    "ar": "شاين ماكس"
+  },
+  "Adamas": {
+    "en": "Adamas",
+    "ar": "أداماس"
+  },
+  "Eado": {
+    "en": "Eado",
+    "ar": "إيدو"
+  },
+  "Monjaro": {
+    "en": "Monjaro",
+    "ar": "مونجارو"
+  },
+  "H6": {
+    "en": "H6",
+    "ar": "H6"
+  },
+  "Jolion": {
+    "en": "Jolion",
+    "ar": "جوليون"
+  },
+  "Tiggo 7": {
+    "en": "Tiggo 7",
+    "ar": "تيجو 7"
+  },
+  "Tiggo 8": {
+    "en": "Tiggo 8",
+    "ar": "تيجو 8"
+  },
+  "T5 EVO": {
+    "en": "T5 EVO",
+    "ar": "تي 5 إيفو"
+  },
+  "UNI-V": {
+    "en": "UNI-V",
+    "ar": "يوني في"
+  },
+  "UNI-K": {
+    "en": "UNI-K",
+    "ar": "يوني كي"
+  },
+  "UNI-T": {
+    "en": "UNI-T",
+    "ar": "يوني تي"
+  },
+  "1.5 L · I4 · Hybrid": {
+    "en": "1.5 L · I4 · Hybrid",
+    "ar": "1.5 لتر · I4 · هجين"
+  },
+  "2.0 L · I4 · Plug-in hybrid": {
+    "en": "2.0 L · I4 · Plug-in hybrid",
+    "ar": "2.0 لتر · I4 · هجين قابل للشحن"
+  },
+  "2.0 L · I4 · Diesel": {
+    "en": "2.0 L · I4 · Diesel",
+    "ar": "2.0 لتر · I4 · ديزل"
+  },
+  "2.5 L · I4 · Diesel": {
+    "en": "2.5 L · I4 · Diesel",
+    "ar": "2.5 لتر · I4 · ديزل"
+  },
+  "1.5 L · I4 · Turbo": {
+    "en": "1.5 L · I4 · Turbo",
+    "ar": "1.5 لتر · I4 · تيربو"
+  },
+  "1.5 L · 14 · Plug-in hybrid": {
+    "en": "1.5 L · 14 · Plug-in hybrid",
+    "ar": "1.5 لتر · 14 · هجين قابل للشحن"
+  },
+  "2.7 L · I4 · Diesel": {
+    "en": "2.7 L · I4 · Diesel",
+    "ar": "2.7 لتر · I4 · ديزل"
+  },
+  "1.5 L · I4 · REEV": {
+    "en": "1.5 L · I4 · REEV",
+    "ar": "1.5 لتر · I4 · REEV"
+  },
+  "1.5 L · REEV": {
+    "en": "1.5 L · REEV",
+    "ar": "1.5 لتر · REEV"
+  },
+  "1.5 L · I4 · Plug-in hybrid": {
+    "en": "1.5 L · I4 · Plug-in hybrid",
+    "ar": "1.5 لتر · I4 · هجين قابل للشحن"
+  },
+  "Camry": {
+    "en": "Camry",
+    "ar": "كامري"
+  },
+  "A25A-FKS · 2.5L · Petrol (verify model year)": {
+    "en": "A25A-FKS · 2.5L · Petrol (verify model year)",
+    "ar": "A25A-FKS · 2.5L · بنزين (تحقّق من سنة الموديل)"
+  },
+  "A25A-FXS · 2.5L Hybrid · Hybrid (verify model year)": {
+    "en": "A25A-FXS · 2.5L Hybrid · Hybrid (verify model year)",
+    "ar": "A25A-FXS · 2.5L Hybrid · هجين (تحقّق من سنة الموديل)"
+  },
+  "2GD-FTV · 2.4L Diesel Turbo · Diesel (verify model year)": {
+    "en": "2GD-FTV · 2.4L Diesel Turbo · Diesel (verify model year)",
+    "ar": "2GD-FTV · 2.4L Diesel Turbo · ديزل (تحقّق من سنة الموديل)"
+  },
+  "2TR-FE · 2.7L · Petrol (verify model year)": {
+    "en": "2TR-FE · 2.7L · Petrol (verify model year)",
+    "ar": "2TR-FE · 2.7L · بنزين (تحقّق من سنة الموديل)"
+  },
+  "Accent": {
+    "en": "Accent",
+    "ar": "أكسنت"
+  },
+  "Smartstream G1.5 · 1.5L · Petrol (verify model year)": {
+    "en": "Smartstream G1.5 · 1.5L · Petrol (verify model year)",
+    "ar": "Smartstream G1.5 · 1.5L · بنزين (تحقّق من سنة الموديل)"
+  },
+  "Smartstream G2.5 · 2.5L · Petrol (verify model year)": {
+    "en": "Smartstream G2.5 · 2.5L · Petrol (verify model year)",
+    "ar": "Smartstream G2.5 · 2.5L · بنزين (تحقّق من سنة الموديل)"
+  },
+  "Smartstream G1.6 T-GDi · 1.6L Turbo · Petrol (verify model year)": {
+    "en": "Smartstream G1.6 T-GDi · 1.6L Turbo · Petrol (verify model year)",
+    "ar": "Smartstream G1.6 T-GDi · 1.6L Turbo · بنزين (تحقّق من سنة الموديل)"
+  },
+  "Isuzu": {
+    "en": "Isuzu",
+    "ar": "إيسوزو"
+  },
+  "D-Max": {
+    "en": "D-Max",
+    "ar": "دي ماكس"
+  },
+  "RZ4E-TC · 1.9L Diesel Turbo · Diesel (verify model year)": {
+    "en": "RZ4E-TC · 1.9L Diesel Turbo · Diesel (verify model year)",
+    "ar": "RZ4E-TC · 1.9L Diesel Turbo · ديزل (تحقّق من سنة الموديل)"
+  },
+  "4JJ3-TCX · 3.0L Diesel Turbo · Diesel (verify model year)": {
+    "en": "4JJ3-TCX · 3.0L Diesel Turbo · Diesel (verify model year)",
+    "ar": "4JJ3-TCX · 3.0L Diesel Turbo · ديزل (تحقّق من سنة الموديل)"
+  },
+  "X70": {
+    "en": "X70",
+    "ar": "X70"
+  },
+  "SQRE4T15C · 1.5L Turbo · Petrol (verify model year)": {
+    "en": "SQRE4T15C · 1.5L Turbo · Petrol (verify model year)",
+    "ar": "SQRE4T15C · 1.5L Turbo · بنزين (تحقّق من سنة الموديل)"
+  },
+  "Haval": {
+    "en": "Haval",
+    "ar": "هافال"
+  },
+  "Mercedes-Benz": {
+    "en": "Mercedes-Benz",
+    "ar": "مرسيدس-بنز"
+  },
+  "BMW": {
+    "en": "BMW",
+    "ar": "بي إم دبليو"
+  },
+  "Omoda": {
+    "en": "Omoda",
+    "ar": "أومودا"
+  },
+  "Jaecoo": {
+    "en": "Jaecoo",
+    "ar": "جايكو"
+  },
+  "Foton": {
+    "en": "Foton",
+    "ar": "فوتون"
+  },
+  "Lincoln": {
+    "en": "Lincoln",
+    "ar": "لينكولن"
+  },
+  "Rox": {
+    "en": "Rox",
+    "ar": "روكس"
+  },
+  "Corolla": {
+    "en": "Corolla",
+    "ar": "كورولا"
+  },
+  "Land Cruiser (LC300)": {
+    "en": "Land Cruiser (LC300)",
+    "ar": "لاندكروزر"
+  },
+  "Land Cruiser 250": {
+    "en": "Land Cruiser 250",
+    "ar": "لاندكروزر 250"
+  },
+  "Land Cruiser Pickup": {
+    "en": "Land Cruiser Pickup",
+    "ar": "لاندكروزر بيك أب"
+  },
+  "RAV4": {
+    "en": "RAV4",
+    "ar": "راف فور"
+  },
+  "Highlander": {
+    "en": "Highlander",
+    "ar": "هايلاندر"
+  },
+  "Hiace": {
+    "en": "Hiace",
+    "ar": "هايس"
+  },
+  "Stargazer": {
+    "en": "Stargazer",
+    "ar": "ستارجيزر"
+  },
+  "Picanto": {
+    "en": "Picanto",
+    "ar": "بيكانتو"
+  },
+  "Pegas": {
+    "en": "Pegas",
+    "ar": "بيجاس"
+  },
+  "Cerato": {
+    "en": "Cerato",
+    "ar": "سيراتو"
+  },
+  "Seltos": {
+    "en": "Seltos",
+    "ar": "سيلتوس"
+  },
+  "F-150": {
+    "en": "F-150",
+    "ar": "F-150"
+  },
+  "Altima": {
+    "en": "Altima",
+    "ar": "ألتيما"
+  },
+  "Kicks": {
+    "en": "Kicks",
+    "ar": "كيكس"
+  },
+  "MU-X": {
+    "en": "MU-X",
+    "ar": "إم يو إكس"
+  },
+  "Dzire": {
+    "en": "Dzire",
+    "ar": "ديزاير"
+  },
+  "Swift": {
+    "en": "Swift",
+    "ar": "سويفت"
+  },
+  "Ertiga": {
+    "en": "Ertiga",
+    "ar": "إرتيجا"
+  },
+  "Jimny": {
+    "en": "Jimny",
+    "ar": "جيمني"
+  },
+  "Mazda3": {
+    "en": "Mazda3",
+    "ar": "مازدا 3"
+  },
+  "Mazda6": {
+    "en": "Mazda6",
+    "ar": "مازدا 6"
+  },
+  "CX-5": {
+    "en": "CX-5",
+    "ar": "CX-5"
+  },
+  "CX-9": {
+    "en": "CX-9",
+    "ar": "CX-9"
+  },
+  "CX-30": {
+    "en": "CX-30",
+    "ar": "CX-30"
+  },
+  "Alsvin": {
+    "en": "Alsvin",
+    "ar": "ألسفين"
+  },
+  "Eado Plus": {
+    "en": "Eado Plus",
+    "ar": "إيدو بلس"
+  },
+  "CS35 Plus": {
+    "en": "CS35 Plus",
+    "ar": "CS35 بلس"
+  },
+  "CS75 Plus": {
+    "en": "CS75 Plus",
+    "ar": "CS75 بلس"
+  },
+  "ES": {
+    "en": "ES",
+    "ar": "ES"
+  },
+  "LX": {
+    "en": "LX",
+    "ar": "LX"
+  },
+  "RX": {
+    "en": "RX",
+    "ar": "RX"
+  },
+  "NX": {
+    "en": "NX",
+    "ar": "NX"
+  },
+  "GX": {
+    "en": "GX",
+    "ar": "GX"
+  },
+  "Suburban": {
+    "en": "Suburban",
+    "ar": "سوبربان"
+  },
+  "Malibu": {
+    "en": "Malibu",
+    "ar": "ماليبو"
+  },
+  "Captiva": {
+    "en": "Captiva",
+    "ar": "كابتيفا"
+  },
+  "Acadia": {
+    "en": "Acadia",
+    "ar": "أكاديا"
+  },
+  "Terrain": {
+    "en": "Terrain",
+    "ar": "تيرين"
+  },
+  "L200": {
+    "en": "L200",
+    "ar": "L200"
+  },
+  "Attrage": {
+    "en": "Attrage",
+    "ar": "أتراج"
+  },
+  "Xpander": {
+    "en": "Xpander",
+    "ar": "إكسباندر"
+  },
+  "Accord": {
+    "en": "Accord",
+    "ar": "أكورد"
+  },
+  "Civic": {
+    "en": "Civic",
+    "ar": "سيفيك"
+  },
+  "CR-V": {
+    "en": "CR-V",
+    "ar": "CR-V"
+  },
+  "HR-V": {
+    "en": "HR-V",
+    "ar": "HR-V"
+  },
+  "5": {
+    "en": "5",
+    "ar": "MG5"
+  },
+  "ZS": {
+    "en": "ZS",
+    "ar": "ZS"
+  },
+  "HS": {
+    "en": "HS",
+    "ar": "HS"
+  },
+  "GT": {
+    "en": "GT",
+    "ar": "GT"
+  },
+  "Coolray": {
+    "en": "Coolray",
+    "ar": "كولراي"
+  },
+  "Emgrand": {
+    "en": "Emgrand",
+    "ar": "إمجراند"
+  },
+  "Okavango": {
+    "en": "Okavango",
+    "ar": "أوكافانجو"
+  },
+  "H9": {
+    "en": "H9",
+    "ar": "H9"
+  },
+  "Dargo": {
+    "en": "Dargo",
+    "ar": "دارغو"
+  },
+  "X90 Plus": {
+    "en": "X90 Plus",
+    "ar": "X90 Plus"
+  },
+  "T2": {
+    "en": "T2",
+    "ar": "T2"
+  },
+  "Dashing": {
+    "en": "Dashing",
+    "ar": "داشينغ"
+  },
+  "2.5 L · I4 · Petrol (workbook reference)": {
+    "en": "2.5 L · I4 · Petrol (workbook reference)",
+    "ar": "2.5L I4 بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "3.5 L · V6 · Petrol (workbook reference)": {
+    "en": "3.5 L · V6 · Petrol (workbook reference)",
+    "ar": "3.5L V6 بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "1.8 L · I4 · Hybrid": {
+    "en": "1.8 L · I4 · Hybrid",
+    "ar": "1.8L I4 هايبرد"
+  },
+  "2 L · I4 · Petrol": {
+    "en": "2 L · I4 · Petrol",
+    "ar": "2.0L I4 بنزين"
+  },
+  "2.4 L · I4 · Diesel · Turbo": {
+    "en": "2.4 L · I4 · Diesel · Turbo",
+    "ar": "2.4L I4 تيربو ديزل"
+  },
+  "2.8 L · I4 · Diesel · Turbo": {
+    "en": "2.8 L · I4 · Diesel · Turbo",
+    "ar": "2.8L I4 تيربو ديزل"
+  },
+  "4 L · V6 · Petrol": {
+    "en": "4 L · V6 · Petrol",
+    "ar": "4.0L V6 بنزين"
+  },
+  "3.5 L · V6 · Petrol · Turbo": {
+    "en": "3.5 L · V6 · Petrol · Turbo",
+    "ar": "3.5L V6 توين تيربو بنزين"
+  },
+  "3.5 L · V6 · Petrol · Turbo (workbook reference)": {
+    "en": "3.5 L · V6 · Petrol · Turbo (workbook reference)",
+    "ar": "3.5L V6 توين تيربو بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "3.3 L · V6 · Diesel · Turbo": {
+    "en": "3.3 L · V6 · Diesel · Turbo",
+    "ar": "3.3L V6 توين تيربو ديزل"
+  },
+  "2.4 L · I4 · Hybrid · Turbo (workbook reference)": {
+    "en": "2.4 L · I4 · Hybrid · Turbo (workbook reference)",
+    "ar": "2.4L I4 تيربو هايبرد (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "4 L · V6 · Petrol (workbook reference)": {
+    "en": "4 L · V6 · Petrol (workbook reference)",
+    "ar": "4.0L V6 بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "2.8 L · I4 · Diesel (workbook reference)": {
+    "en": "2.8 L · I4 · Diesel (workbook reference)",
+    "ar": "2.8L I4 ديزل (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "2.5 L · I4 · Petrol · Turbo": {
+    "en": "2.5 L · I4 · Petrol · Turbo",
+    "ar": "2.5L I4 تيربو بنزين"
+  },
+  "1.2 L · I4 · Petrol (workbook reference)": {
+    "en": "1.2 L · I4 · Petrol (workbook reference)",
+    "ar": "1.2L I4 بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "1.4 L · I4 · Petrol (workbook reference)": {
+    "en": "1.4 L · I4 · Petrol (workbook reference)",
+    "ar": "1.4L I4 بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "1.6 L · I4 · Petrol (workbook reference)": {
+    "en": "1.6 L · I4 · Petrol (workbook reference)",
+    "ar": "1.6L I4 بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "2 L · I4 · Petrol (workbook reference)": {
+    "en": "2 L · I4 · Petrol (workbook reference)",
+    "ar": "2.0L I4 بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "5.6 L · V8 · Petrol (workbook reference)": {
+    "en": "5.6 L · V8 · Petrol (workbook reference)",
+    "ar": "5.6L V8 بنزين (مرجع الملف؛ يحتاج تحققًا)"
+  },
+  "6.2 L · V8 · Petrol (workbook reference)": {
+    "en": "6.2 L · V8 · Petrol (workbook reference)",
+    "ar": "6.2L V8 بنزين (مرجع الملف؛ يحتاج تحققًا)"
   }
 }

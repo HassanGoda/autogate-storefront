@@ -1,3 +1,4 @@
+import ProductPrice from '~/components/shared/ProductPrice';
 import CatalogVehicleContext from '~/components/shop/CatalogVehicleContext';
 import { useLocalize } from '~/services/i18n/localize';
 // react
@@ -172,17 +173,17 @@ function ShopPageProduct(props: Props) {
                                 <CurrencyFormat value={product.compareAtPrice} />
                             </div>
                             <div className="product__price product__price--new">
-                                <CurrencyFormat value={product.price} />
+                                <ProductPrice value={product.price} />
                             </div>
                         </React.Fragment>
                     ))}
                     {l10n(!product.compareAtPrice && (
                         <div className="product__price product__price--current">
-                            <CurrencyFormat value={product.price} />
+                            <ProductPrice value={product.price} />
                         </div>
                     ))}
                 </div>
-                <StockStatusBadge className="product__stock" stock={product.stock} />
+                {product.price > 0 && <StockStatusBadge className="product__stock" stock={product.stock} />}
             </div>
 
             <div className="product__meta">
@@ -230,6 +231,11 @@ function ShopPageProduct(props: Props) {
 
     const productActions = (
         <div className="product__actions">
+            {product.price <= 0 && (
+                <a className="btn btn-primary" href={`mailto:Spareparts@autogate-sa.com?subject=${encodeURIComponent(product.name + ' — ' + product.sku)}`}>
+                    <FormattedMessage id="BUTTON_REQUEST_PART_QUOTE" />
+                </a>
+            )}
             {l10n(product.stock !== 'out-of-stock' && (
                 <React.Fragment>
                     <div className="product__actions-item product__actions-item--quantity">

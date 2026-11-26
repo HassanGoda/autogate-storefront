@@ -1,3 +1,4 @@
+import ProductPrice from '~/components/shared/ProductPrice';
 import { useLocalize } from '~/services/i18n/localize';
 // react
 import React from 'react';
@@ -53,7 +54,7 @@ function WidgetProducts(props: Props) {
                                 {l10n(product.compareAtPrice && (
                                     <React.Fragment>
                                         <div className="widget-products__price widget-products__price--new">
-                                            <CurrencyFormat value={product.price} />
+                                            <ProductPrice value={product.price} />
                                         </div>
                                         <div className="widget-products__price widget-products__price--old">
                                             <CurrencyFormat value={product.compareAtPrice} />
@@ -62,7 +63,7 @@ function WidgetProducts(props: Props) {
                                 ))}
                                 {l10n(!product.compareAtPrice && (
                                     <div className="widget-products__price widget-products__price--current">
-                                        <CurrencyFormat value={product.price} />
+                                        <ProductPrice value={product.price} />
                                     </div>
                                 ))}
                             </div>

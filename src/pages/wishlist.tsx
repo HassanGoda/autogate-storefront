@@ -1,3 +1,4 @@
+import ProductPrice from '~/components/shared/ProductPrice';
 import { useLocalize } from '~/services/i18n/localize';
 // react
 import React from 'react';
@@ -10,7 +11,6 @@ import AppLink from '~/components/shared/AppLink';
 import AsyncAction from '~/components/shared/AsyncAction';
 import BlockHeader from '~/components/blocks/BlockHeader';
 import BlockSpace from '~/components/blocks/BlockSpace';
-import CurrencyFormat from '~/components/shared/CurrencyFormat';
 import PageTitle from '~/components/shared/PageTitle';
 import Rating from '~/components/shared/Rating';
 import StockStatusBadge from '~/components/shared/StockStatusBadge';
@@ -153,7 +153,7 @@ function Page() {
                                                 'wishlist__column--stock',
                                             )}
                                         >
-                                            <StockStatusBadge stock={product.stock} />
+                                            {product.price > 0 && <StockStatusBadge stock={product.stock} />}
                                         </td>
                                         <td
                                             className={classNames(
@@ -162,7 +162,7 @@ function Page() {
                                                 'wishlist__column--price',
                                             )}
                                         >
-                                            <CurrencyFormat value={product.price} />
+                                            <ProductPrice value={product.price} />
                                         </td>
                                         <td
                                             className={classNames(

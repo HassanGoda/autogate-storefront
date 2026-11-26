@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1000,
+    "title": "AutoGate vehicle care",
+    "image": "/images/autogate-official/services.webp",
+    "categories": [
+      "About Us"
+    ],
+    "date": "",
+    "officialPath": "/services",
+    "summary": "Explore window tinting, paint protection and detailing."
+  },
+  {
+    "id": 1001,
+    "title": "About AutoGate Cars",
+    "image": "/images/autogate-official/company.webp",
+    "categories": [
+      "About Us"
+    ],
+    "date": "",
+    "officialPath": "/about-us",
+    "summary": "Learn about AutoGate and its automotive services in Saudi Arabia."
+  },
+  {
+    "id": 1002,
+    "title": "Branches and support",
+    "image": "/images/autogate-official/contact.webp",
+    "categories": [
+      "About Us"
+    ],
+    "date": "",
+    "officialPath": "/contact-us#branches-section",
+    "summary": "Find AutoGate branches and contact the team."
+  }
+]

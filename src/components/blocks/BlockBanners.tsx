@@ -16,12 +16,12 @@ function BlockBanners() {
         <div className="block block-banners">
             <div className="container">
                 <div className="block-banners__list">
-                    <AppLink href="/" className="block-banners__item block-banners__item--style--one">
+                    <AppLink href={`https://autogate.sa/${intl.locale}/services`} className="block-banners__item block-banners__item--style--one">
                         <span className="block-banners__item-image">
-                            <AppImage className="reflect-rtl" src="/images/banners/banner1.jpg" />
+                            <AppImage className="reflect-rtl" src="/images/autogate-official/services.webp" />
                         </span>
                         <span className="block-banners__item-image block-banners__item-image--blur">
-                            <AppImage className="reflect-rtl" src="/images/banners/banner1.jpg" />
+                            <AppImage className="reflect-rtl" src="/images/autogate-official/services.webp" />
                         </span>
                         <span className="block-banners__item-title">
                             <FormattedMessage id="TEXT_BANNER_ONE_TITLE" />
@@ -37,12 +37,12 @@ function BlockBanners() {
                         </span>
                     </AppLink>
 
-                    <AppLink href="/" className="block-banners__item block-banners__item--style--two">
+                    <AppLink href="/contact-us" className="block-banners__item block-banners__item--style--two">
                         <span className="block-banners__item-image">
-                            <AppImage className="reflect-rtl" src="/images/banners/banner2.jpg" />
+                            <AppImage className="reflect-rtl" src="/images/autogate-official/contact.webp" />
                         </span>
                         <span className="block-banners__item-image block-banners__item-image--blur">
-                            <AppImage className="reflect-rtl" src="/images/banners/banner2.jpg" />
+                            <AppImage className="reflect-rtl" src="/images/autogate-official/contact.webp" />
                         </span>
                         <span className="block-banners__item-title">
                             <FormattedMessage id="TEXT_BANNER_TWO_TITLE" />

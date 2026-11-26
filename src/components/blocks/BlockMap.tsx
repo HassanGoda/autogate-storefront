@@ -2,7 +2,7 @@ import { useLocalize } from '~/services/i18n/localize';
 // react
 import React from 'react';
 
-function BlockMap() {
+function BlockMap({ query = "AutoGate Cars Saudi Arabia" }: { query?: string }) {
     const l10n = useLocalize();
 
     return (
@@ -10,7 +10,7 @@ function BlockMap() {
             <div className="block-map__body">
                 <iframe
                     title={l10n("Google Map")}
-                    src="https://maps.google.com/maps?q=Holbrook-Palmer%20Park&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                    src={`https://maps.google.com/maps?q=${encodeURIComponent(query)}&output=embed`}
                     frameBorder="0"
                     scrolling="no"
                     marginHeight={0}
