@@ -41,15 +41,33 @@ jobs:
               for name, old in d.get(section,{}).items():
                   if os.environ['SCOPE']=='core' and name not in core:
                       continue
-                  meta=json.loads(subprocess.check_output(['npm','view',name+'@latest','version','deprecated','--json'],text=True))
-                  version=meta['version'] if isinstance(meta,dict) else meta
-                  report[name]={'before':old,'candidate':version,'deprecated':meta.get('deprecated') if isinstance(meta,dict) else None}
+                  # Query one field: npm view with several fields can return null/array on newer npm.
+                  selector=name+'@latest'
+                  if name=='typescript':
+                      selector='typescript@^5'
+                  version=json.loads(subprocess.check_output(['npm','view',selector,'version','--json'],text=True))
+                  if isinstance(version,list):
+                      version=version[-1]
+                  if not isinstance(version,str) or not version:
+                      raise ValueError(f'Invalid version for {name}: {version!r}')
+                  report[name]={'before':old,'candidate':version,'selector':selector}
                   d[section][name]=version
+          if os.environ['SCOPE']=='core':
+              # Next 16 needs React 18+; keep React and React DOM aligned in core trial.
+              for n in ('react','react-dom'):
+                  if n not in report:
+                      raise ValueError(f'{n} missing in core trial')
           Path('modernization-report/versions.json').write_text(json.dumps(report,indent=2))
           p.write_text(json.dumps(d,indent=2)+'\n')
           PY
       - name: Install candidate with peer validation
-        run: npm install --no-audit
+        run: |
+          set -o pipefail
+          npm install --no-audit 2>&1 | tee modernization-report/install.log
+      - name: Report incompatible peer dependencies when installation fails
+        if: failure()
+        run: |
+          grep -E 'npm error (Could not resolve dependency|Conflicting peer dependency|peer |must provide string spec|ERESOLVE)' modernization-report/install.log | head -60 || true
       - name: Audit candidate
         run: |
           python - <<'PY'
