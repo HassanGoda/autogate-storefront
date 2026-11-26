@@ -27,25 +27,31 @@ for p in sorted(root.rglob("*")):
             target = p.with_suffix(".webp")
             # Never overwrite an existing potentially unrelated asset.
             if target.exists():
-                with Image.open(target) as other:
-                    if other.size != im.size:
-                        blocked.append(str(p)); continue
-                    # Compare against deterministic encoding used by migration.
                 from io import BytesIO
                 buf = BytesIO()
                 im.save(buf,"WEBP",quality=88,method=6)
                 buf.seek(0)
                 with Image.open(buf) as expected, Image.open(target) as actual:
-                    if expected.convert("RGBA").tobytes() != actual.convert("RGBA").tobytes():
-                        blocked.append(str(p)); continue
+                    same = expected.size == actual.size and expected.convert("RGBA").tobytes() == actual.convert("RGBA").tobytes()
+                if not same:
+                    target = p.with_name(p.stem + "-source-" + p.suffix[1:].lower() + ".webp")
+                    if not target.exists():
+                        im.save(target,"WEBP",lossless=True)
+                    with Image.open(target) as actual:
+                        if actual.size != im.size or actual.convert("RGBA").tobytes() != im.convert("RGBA").tobytes():
+                            blocked.append(str(p)); continue
             else:
                 im.save(target,"WEBP",lossless=True)
             old = p.relative_to(root).as_posix()
             new = target.relative_to(root).as_posix()
-            for f,s in list(texts.items()):
-                texts[f] = s.replace(old,new)
-            if any(p.name in s for s in texts.values()):
+            proposed = {f:s.replace(old,new) for f,s in texts.items()}
+            if any(p.name in s for s in proposed.values()):
                 blocked.append(str(p)); continue
+            # Retain originals where generated or indirect paths cannot be ruled out.
+            if not any(old in s for s in texts.values()):
+                blocked.append(str(p) + " (no explicit path; review dynamic references)")
+                continue
+            texts = proposed
         p.unlink()
         removed.append(str(p))
     except Exception as e:
