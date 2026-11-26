@@ -45,6 +45,10 @@ jobs:
                   selector=name+'@latest'
                   if name=='typescript':
                       selector='typescript@^5'
+                  if name=='eslint':
+                      selector='eslint@^8'
+                  if name in ('react','react-dom'):
+                      selector=name+'@^19'
                   version=json.loads(subprocess.check_output(['npm','view',selector,'version','--json'],text=True))
                   if isinstance(version,list):
                       version=version[-1]
@@ -63,6 +67,7 @@ jobs:
       - name: Install candidate with peer validation
         run: |
           set -o pipefail
+          rm -f package-lock.json
           npm install --no-audit 2>&1 | tee modernization-report/install.log
       - name: Report incompatible peer dependencies when installation fails
         if: failure()
