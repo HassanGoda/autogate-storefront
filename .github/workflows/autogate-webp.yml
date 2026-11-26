@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install Pillow
-      - name: Final guarded raster cleanup
+      - name: Verified lossless alternatives and guarded cleanup
         run: python scripts/cleanup-static-images.py
       - uses: actions/setup-node@v4
         with:
