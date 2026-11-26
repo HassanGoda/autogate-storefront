@@ -1,0 +1,74 @@
+name: AutoGate 2026 Modernization
+on:
+  push:
+    branches: [autogate-security-upgrade]
+    paths: ['.github/workflows/autogate-2026.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        scope: [core, all]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26.13.1'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Resolve stable registry releases
+        env:
+          SCOPE: ${{ matrix.scope }}
+        run: |
+          mkdir -p modernization-report
+          node --version > modernization-report/runtime.txt
+          npm --version >> modernization-report/runtime.txt
+          python --version >> modernization-report/runtime.txt
+          python - <<'PY'
+          import json, subprocess, os
+          from pathlib import Path
+          p=Path('package.json')
+          d=json.loads(p.read_text())
+          report={}
+          core={'next','react','react-dom','typescript','@types/react','@types/react-dom','@types/node','query-string'}
+          for section in ('dependencies','devDependencies'):
+              for name, old in d.get(section,{}).items():
+                  if os.environ['SCOPE']=='core' and name not in core:
+                      continue
+                  meta=json.loads(subprocess.check_output(['npm','view',name+'@latest','version','deprecated','--json'],text=True))
+                  version=meta['version'] if isinstance(meta,dict) else meta
+                  report[name]={'before':old,'candidate':version,'deprecated':meta.get('deprecated') if isinstance(meta,dict) else None}
+                  d[section][name]=version
+          Path('modernization-report/versions.json').write_text(json.dumps(report,indent=2))
+          p.write_text(json.dumps(d,indent=2)+'\n')
+          PY
+      - name: Install candidate with peer validation
+        run: npm install --no-audit
+      - name: Audit candidate
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          for name,flags in [('all',[]),('production',['--omit=dev'])]:
+              r=subprocess.run(['npm','audit','--json',*flags],capture_output=True,text=True)
+              Path('modernization-report/'+name+'.json').write_text(r.stdout)
+              print(name,json.loads(r.stdout)['metadata']['vulnerabilities'])
+          PY
+      - run: npm run verify:locales
+      - name: Production build
+        run: npm run build
+      - name: Verify source and assets unchanged
+        run: git diff --exit-code -- src public
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: modernization-${{ matrix.scope }}
+          path: |
+            modernization-report/
+            package.json
+            package-lock.json
