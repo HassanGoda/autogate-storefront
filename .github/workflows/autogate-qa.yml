@@ -29,3 +29,27 @@ jobs:
               assert h[:4] == b'RIFF' and h[8:12] == b'WEBP', str(p)
           print(f'Validated {len(files)} WebP signatures')
           PY
+      - name: Inventory remaining raster assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from collections import Counter
+          import re
+          root = Path('public')
+          ext = {'.jpg','.jpeg','.png','.avif','.bmp','.tif','.tiff','.gif','.webp','.svg','.ico'}
+          assets = [p for p in root.rglob('*') if p.is_file() and p.suffix.lower() in ext]
+          print('Image inventory:', dict(Counter(p.suffix.lower() for p in assets)))
+          for p in assets:
+              if p.suffix.lower() not in {'.webp','.svg','.ico'}:
+                  print('LEGACY:', p, 'bytes:', p.stat().st_size, 'WebP exists:', p.with_suffix('.webp').exists())
+          missing = set()
+          for p in Path('src').rglob('*'):
+              if p.is_file() and p.suffix in {'.ts','.tsx','.js','.jsx','.json','.scss','.css'}:
+                  for ref in re.findall(r"""['"](/images/[\w./@%+ -]+\.(?:webp|png|jpe?g|avif|svg|gif))['"]""", p.read_text(encoding='utf-8')):
+                      if not (root / ref.lstrip('/')).is_file():
+                          missing.add((str(p),ref))
+          for item in sorted(missing):
+              print('MISSING:', *item)
+          print('Missing literal image references:', len(missing))
+          assert not missing, 'Missing literal image references'
+          PY
