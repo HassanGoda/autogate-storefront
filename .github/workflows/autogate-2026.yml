@@ -13,11 +13,12 @@ jobs:
       fail-fast: false
       matrix:
         scope: [core, all]
+        node: ['24', 'node']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '26.13.1'
+          node-version: ${{ matrix.node }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.14'
@@ -67,7 +68,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: modernization-${{ matrix.scope }}
+          name: modernization-${{ matrix.scope }}-${{ matrix.node }}
           path: |
             modernization-report/
             package.json
