@@ -1,0 +1,56 @@
+name: AutoGate Staged Security Upgrade
+on:
+  push:
+    branches: [autogate-security-upgrade]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compatibility:
+    if: github.ref == 'refs/heads/autogate-security-upgrade'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - stage: next12
+            next: '12'
+            react: '17.0.2'
+          - stage: next13
+            next: '13'
+            react: '18.2.0'
+          - stage: next14
+            next: '14'
+            react: '18.2.0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated candidate
+        run: |
+          mkdir -p upgrade-report
+          npm install --save-exact --legacy-peer-deps "next@${{ matrix.next }}" "react@${{ matrix.react }}" "react-dom@${{ matrix.react }}" 2>&1 | tee upgrade-report/install.log
+        shell: bash
+      - name: Audit candidate
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          r = subprocess.run(['npm','audit','--json','--legacy-peer-deps'],capture_output=True,text=True)
+          Path('upgrade-report/audit.json').write_text(r.stdout)
+          d=json.loads(r.stdout)
+          print(d['metadata']['vulnerabilities'])
+          PY
+      - run: npm run verify:locales
+      - run: npm run build
+      - name: Verify template source unchanged
+        run: git diff --exit-code -- src public
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: upgrade-${{ matrix.stage }}
+          path: |
+            upgrade-report/
+            package.json
+            package-lock.json
