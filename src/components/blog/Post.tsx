@@ -45,7 +45,7 @@ function Post(props: Props) {
 
                     <figure>
                         <AppLink href="/">
-                            <AppImage src="/images/posts/post-3.jpg" />
+                            <AppImage src="/images/posts/post-3.webp" />
                         </AppLink>
                         <figcaption>{l10n("Nunc viverra, dui nec commodo dignissim, libero arcu.")}</figcaption>
                     </figure>
@@ -92,7 +92,7 @@ function Post(props: Props) {
 
                 <div className="post__author">
                     <div className="post__author-avatar">
-                        <AppImage src="/images/avatars/avatar-4.jpg" />
+                        <AppImage src="/images/avatars/avatar-4.webp" />
                     </div>
                     <div className="post__author-info">
                         <div className="post__author-name">{l10n("Ryan Ford")}</div>

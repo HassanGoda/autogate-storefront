@@ -26,7 +26,7 @@
     "make": "Mg",
     "model": "20 T",
     "makeAr": "إم جي",
-    "logo": "/images/manufacturers/mg.png",
+    "logo": "/images/manufacturers/mg.webp",
     "image": null
   },
   {
@@ -46,7 +46,7 @@
     "make": "Mg",
     "model": "3",
     "makeAr": "إم جي",
-    "logo": "/images/manufacturers/mg.png",
+    "logo": "/images/manufacturers/mg.webp",
     "image": null
   },
   {
@@ -66,7 +66,7 @@
     "make": "Mg",
     "model": "5",
     "makeAr": "إم جي",
-    "logo": "/images/manufacturers/mg.png",
+    "logo": "/images/manufacturers/mg.webp",
     "image": null
   },
   {
@@ -76,7 +76,7 @@
     "make": "Mg",
     "model": "6",
     "makeAr": "إم جي",
-    "logo": "/images/manufacturers/mg.png",
+    "logo": "/images/manufacturers/mg.webp",
     "image": null
   },
   {
@@ -116,7 +116,7 @@
     "make": "Junfeng",
     "model": "A08 HIGH ROOF",
     "makeAr": "جونفنغ",
-    "logo": "/images/manufacturers/junfeng.png",
+    "logo": "/images/manufacturers/junfeng.webp",
     "image": null
   },
   {
@@ -136,7 +136,7 @@
     "make": "GMC",
     "model": "ACADIA",
     "makeAr": "جي إم سي",
-    "logo": "/images/manufacturers/gmc.png",
+    "logo": "/images/manufacturers/gmc.webp",
     "image": null
   },
   {
@@ -156,7 +156,7 @@
     "make": "Honda",
     "model": "Accord",
     "makeAr": "هوندا",
-    "logo": "/images/manufacturers/honda.png",
+    "logo": "/images/manufacturers/honda.webp",
     "image": null
   },
   {
@@ -166,7 +166,7 @@
     "make": "Honda",
     "model": "Accord(not)",
     "makeAr": "هوندا",
-    "logo": "/images/manufacturers/honda.png",
+    "logo": "/images/manufacturers/honda.webp",
     "image": null
   },
   {
@@ -186,7 +186,7 @@
     "make": "Changan",
     "model": "Alsvin",
     "makeAr": "شانجان",
-    "logo": "/images/manufacturers/changan.png",
+    "logo": "/images/manufacturers/changan.webp",
     "image": null
   },
   {
@@ -226,7 +226,7 @@
     "make": "Chery",
     "model": "Arrizo 3",
     "makeAr": "شيري",
-    "logo": "/images/manufacturers/chery.png",
+    "logo": "/images/manufacturers/chery.webp",
     "image": null
   },
   {
@@ -236,7 +236,7 @@
     "make": "Chery",
     "model": "Arrizo 5",
     "makeAr": "شيري",
-    "logo": "/images/manufacturers/chery.png",
+    "logo": "/images/manufacturers/chery.webp",
     "image": null
   },
   {
@@ -246,7 +246,7 @@
     "make": "Chery",
     "model": "Arrizo 5 PRO",
     "makeAr": "شيري",
-    "logo": "/images/manufacturers/chery.png",
+    "logo": "/images/manufacturers/chery.webp",
     "image": null
   },
   {
@@ -256,7 +256,7 @@
     "make": "Chery",
     "model": "Arrizo 6",
     "makeAr": "شيري",
-    "logo": "/images/manufacturers/chery.png",
+    "logo": "/images/manufacturers/chery.webp",
     "image": null
   },
   {
@@ -266,7 +266,7 @@
     "make": "Chery",
     "model": "Arrizo 6 Pro",
     "makeAr": "شيري",
-    "logo": "/images/manufacturers/chery.png",
+    "logo": "/images/manufacturers/chery.webp",
     "image": null
   },
   {
@@ -276,7 +276,7 @@
     "make": "Chery",
     "model": "Arrizo 8 Pro",
     "makeAr": "شيري",
-    "logo": "/images/manufacturers/chery.png",
+    "logo": "/images/manufacturers/chery.webp",
     "image": null
   },
   {
@@ -296,7 +296,7 @@
     "make": "Cadillac",
     "model": "ATC",
     "makeAr": "كاديلاك",
-    "logo": "/images/manufacturers/cadillac.png",
+    "logo": "/images/manufacturers/cadillac.webp",
     "image": null
   },
   {
@@ -306,7 +306,7 @@
     "make": "Cadillac",
     "model": "ATS",
     "makeAr": "كاديلاك",
-    "logo": "/images/manufacturers/cadillac.png",
+    "logo": "/images/manufacturers/cadillac.webp",
     "image": null
   },
   {
@@ -436,7 +436,7 @@
     "make": "OMODA",
     "model": " C5",
     "makeAr": "أومودا",
-    "logo": "/images/manufacturers/omoda.png",
+    "logo": "/images/manufacturers/omoda.webp",
     "image": null
   },
   {
@@ -446,7 +446,7 @@
     "make": "Chevrolet",
     "model": "Camaro",
     "makeAr": "شيفروليه",
-    "logo": "/images/manufacturers/chevrolet.png",
+    "logo": "/images/manufacturers/chevrolet.webp",
     "image": null
   },
   {
@@ -466,7 +466,7 @@
     "make": "Junfeng",
     "model": "CAPTAIN V PASSENGER VAN",
     "makeAr": "جونفنغ",
-    "logo": "/images/manufacturers/junfeng.png",
+    "logo": "/images/manufacturers/junfeng.webp",
     "image": null
   },
   {
@@ -476,7 +476,7 @@
     "make": "Chevrolet",
     "model": "Captiva",
     "makeAr": "شيفروليه",
-    "logo": "/images/manufacturers/chevrolet.png",
+    "logo": "/images/manufacturers/chevrolet.webp",
     "image": null
   },
   {
@@ -536,7 +536,7 @@
     "make": "Dodge",
     "model": "Charger",
     "makeAr": "دودج",
-    "logo": "/images/manufacturers/dodge.png",
+    "logo": "/images/manufacturers/dodge.webp",
     "image": null
   },
   {
@@ -566,7 +566,7 @@
     "make": "Honda",
     "model": "City",
     "makeAr": "هوندا",
-    "logo": "/images/manufacturers/honda.png",
+    "logo": "/images/manufacturers/honda.webp",
     "image": null
   },
   {
@@ -656,7 +656,7 @@
     "make": "Chevrolet",
     "model": "Cruze",
     "makeAr": "شيفروليه",
-    "logo": "/images/manufacturers/chevrolet.png",
+    "logo": "/images/manufacturers/chevrolet.webp",
     "image": null
   },
   {
@@ -666,7 +666,7 @@
     "make": "Changan",
     "model": "CS35 Plus",
     "makeAr": "شانجان",
-    "logo": "/images/manufacturers/changan.png",
+    "logo": "/images/manufacturers/changan.webp",
     "image": null
   },
   {
@@ -676,7 +676,7 @@
     "make": "Changan",
     "model": "CS75 PLUS",
     "makeAr": "شانجان",
-    "logo": "/images/manufacturers/changan.png",
+    "logo": "/images/manufacturers/changan.webp",
     "image": null
   },
   {
@@ -686,7 +686,7 @@
     "make": "Changan",
     "model": "CS 85",
     "makeAr": "شانجان",
-    "logo": "/images/manufacturers/changan.png",
+    "logo": "/images/manufacturers/changan.webp",
     "image": null
   },
   {
@@ -696,7 +696,7 @@
     "make": "Changan",
     "model": "CS 95",
     "makeAr": "شانجان",
-    "logo": "/images/manufacturers/changan.png",
+    "logo": "/images/manufacturers/changan.webp",
     "image": null
   },
   {
@@ -736,7 +736,7 @@
     "make": "Maxus",
     "model": "D60",
     "makeAr": "ماكسوس",
-    "logo": "/images/manufacturers/maxus.png",
+    "logo": "/images/manufacturers/maxus.webp",
     "image": null
   },
   {
@@ -746,7 +746,7 @@
     "make": "Maxus",
     "model": "D60 Max",
     "makeAr": "ماكسوس",
-    "logo": "/images/manufacturers/maxus.png",
+    "logo": "/images/manufacturers/maxus.webp",
     "image": null
   },
   {
@@ -756,7 +756,7 @@
     "make": "Maxus",
     "model": "D90",
     "makeAr": "ماكسوس",
-    "logo": "/images/manufacturers/maxus.png",
+    "logo": "/images/manufacturers/maxus.webp",
     "image": null
   },
   {
@@ -766,7 +766,7 @@
     "make": "Maxus",
     "model": "D90 Max",
     "makeAr": "ماكسوس",
-    "logo": "/images/manufacturers/maxus.png",
+    "logo": "/images/manufacturers/maxus.webp",
     "image": null
   },
   {
@@ -776,7 +776,7 @@
     "make": "Jetour",
     "model": "Dashing",
     "makeAr": "جيتور",
-    "logo": "/images/manufacturers/jetour.png",
+    "logo": "/images/manufacturers/jetour.webp",
     "image": null
   },
   {
@@ -807,7 +807,7 @@
     "displayName": "Ford F-150",
     "manufacturer": "Ford",
     "makeAr": "فورد",
-    "logo": "/images/manufacturers/ford.png"
+    "logo": "/images/manufacturers/ford.webp"
   },
   {
     "make": "Toyota",
@@ -845,6 +845,6 @@
     "id": "legacy-brand-lexus",
     "make": "Lexus",
     "makeAr": "لكزس",
-    "logo": "/images/manufacturers/lexus-logo.png"
+    "logo": "/images/manufacturers/lexus-logo.webp"
   }
 ]

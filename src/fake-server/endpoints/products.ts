@@ -186,7 +186,7 @@ export function addProductReview(productId: number, data: IAddProductReviewData)
         id: getNextReviewId(),
         date: (new Date()).toISOString().substr(0, 10),
         author: data.author,
-        avatar: '/images/avatars/avatar-2.jpg',
+        avatar: '/images/avatars/avatar-2.webp',
         rating: data.rating,
         content: data.content,
     };
