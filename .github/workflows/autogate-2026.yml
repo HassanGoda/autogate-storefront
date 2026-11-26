@@ -36,7 +36,7 @@ jobs:
           p=Path('package.json')
           d=json.loads(p.read_text())
           report={}
-          core={'next','react','react-dom','typescript','@types/react','@types/react-dom','@types/node','query-string'}
+          core={'next','react','react-dom','react-redux','next-redux-wrapper','typescript','@types/react','@types/react-dom','@types/node','query-string'}
           for section in ('dependencies','devDependencies'):
               for name, old in d.get(section,{}).items():
                   if os.environ['SCOPE']=='core' and name not in core:
@@ -64,15 +64,30 @@ jobs:
           Path('modernization-report/versions.json').write_text(json.dumps(report,indent=2))
           p.write_text(json.dumps(d,indent=2)+'\n')
           PY
-      - name: Install candidate with peer validation
+      - name: Strict peer compatibility check
+        id: strict
+        continue-on-error: true
         run: |
           set -o pipefail
           rm -f package-lock.json
-          npm install --no-audit 2>&1 | tee modernization-report/install.log
-      - name: Report incompatible peer dependencies when installation fails
-        if: failure()
+          npm install --no-audit --package-lock-only 2>&1 | tee modernization-report/strict-install.log
+      - name: Diagnostic install only - never publish this candidate
+        if: steps.strict.outcome == 'failure'
         run: |
-          grep -E 'npm error (Could not resolve dependency|Conflicting peer dependency|peer |must provide string spec|ERESOLVE)' modernization-report/install.log | head -60 || true
+          set -o pipefail
+          echo "Unresolved peer dependencies: diagnostic mode only; not deployable" | tee modernization-report/UNSAFE-DIAGNOSTIC.txt
+          npm install --no-audit --legacy-peer-deps 2>&1 | tee modernization-report/diagnostic-install.log
+      - name: Install strictly compatible candidate
+        if: steps.strict.outcome == 'success'
+        run: |
+          set -o pipefail
+          npm ci --no-audit 2>&1 | tee modernization-report/install.log
+      - name: Report peer incompatibilities
+        if: always()
+        run: |
+          if [ -f modernization-report/strict-install.log ]; then
+            grep -E 'npm error (Could not resolve dependency|Conflicting peer dependency|peer |must provide string spec|ERESOLVE)' modernization-report/strict-install.log | head -60 || true
+          fi
       - name: Audit candidate
         run: |
           python - <<'PY'
@@ -86,6 +101,11 @@ jobs:
       - run: npm run verify:locales
       - name: Production build
         run: npm run build
+      - name: Reject diagnostic candidate as deployable
+        if: steps.strict.outcome == 'failure'
+        run: |
+          echo "::error::Strict peer dependency resolution failed. Diagnostic-only candidate cannot be released."
+          exit 1
       - name: Verify source and assets unchanged
         run: git diff --exit-code -- src public
       - uses: actions/upload-artifact@v4
