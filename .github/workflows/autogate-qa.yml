@@ -1,0 +1,31 @@
+name: AutoGate QA
+on:
+  push:
+    branches: [autogate-webp-update]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --legacy-peer-deps
+      - run: npm run verify:locales
+      - run: npm run build
+      - name: Check WebP file signatures
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          files = list(Path('public').rglob('*.webp'))
+          assert files, 'No WebP images found'
+          for p in files:
+              with p.open('rb') as f:
+                  h = f.read(12)
+              assert h[:4] == b'RIFF' and h[8:12] == b'WEBP', str(p)
+          print(f'Validated {len(files)} WebP signatures')
+          PY
