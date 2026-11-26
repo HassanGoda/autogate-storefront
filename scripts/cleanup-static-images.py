@@ -13,11 +13,17 @@ blocked = []
 for p in sorted(root.rglob("*")):
     if not p.is_file() or p.suffix.lower() not in extensions:
         continue
+    if p.stat().st_size == 0:
+        if any(p.name in t for t in texts.values()):
+            blocked.append(str(p)); continue
+        p.unlink()
+        removed.append(str(p))
+        continue
     try:
         with Image.open(p) as im:
             if getattr(im,"n_frames",1) > 1:
                 continue
-            im = ImageOps.exif_transpose(im).convert("RGBA")
+            im = im.convert("RGBA" if "A" in im.getbands() or "transparency" in im.info else "RGB")
             target = p.with_suffix(".webp")
             # Never overwrite an existing potentially unrelated asset.
             if target.exists():
@@ -27,7 +33,7 @@ for p in sorted(root.rglob("*")):
                     # Compare against deterministic encoding used by migration.
                 from io import BytesIO
                 buf = BytesIO()
-                im.convert("RGBA" if im.getextrema()[3][0] < 255 else "RGB").save(buf,"WEBP",quality=88,method=6)
+                im.save(buf,"WEBP",quality=88,method=6)
                 buf.seek(0)
                 with Image.open(buf) as expected, Image.open(target) as actual:
                     if expected.convert("RGBA").tobytes() != actual.convert("RGBA").tobytes():
