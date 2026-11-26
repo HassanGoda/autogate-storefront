@@ -37,8 +37,8 @@ function Page() {
     const slides = useMemo(() => [
         {
             url: '/catalog/products',
-            desktopImage: '/images/slides/slide-3.jpg',
-            mobileImage: '/images/slides/slide-3-mobile.jpg',
+            desktopImage: '/images/slides/slide-3.webp',
+            mobileImage: '/images/slides/slide-3-mobile.webp',
             offer: '30% OFF',
             title: 'When Buying Parts <br>With Installation',
             details: 'Installation of parts in the services of <br>our partners.',
@@ -46,16 +46,16 @@ function Page() {
         },
         {
             url: '/catalog/products',
-            desktopImage: '/images/slides/slide-2.jpg',
-            mobileImage: '/images/slides/slide-2-mobile.jpg',
+            desktopImage: '/images/slides/slide-2.webp',
+            mobileImage: '/images/slides/slide-2-mobile.webp',
             title: 'Not enough <br>spare parts?',
             details: 'We have everything you need – replacement parts, <br>performance parts, accessories, oil & fluids, <br>tools and much more...',
             buttonLabel: 'Shop Now',
         },
         {
             url: '/catalog/products',
-            desktopImage: '/images/slides/slide-1.jpg',
-            mobileImage: '/images/slides/slide-1-mobile.jpg',
+            desktopImage: '/images/slides/slide-1.webp',
+            mobileImage: '/images/slides/slide-1-mobile.webp',
             offer: '30% OFF',
             title: 'Big Choice Of <br>Wheel Tires',
             details: 'Any size and diameter, with or without spikes, <br>summer or winter, rain or snow.',

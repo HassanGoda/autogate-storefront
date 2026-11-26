@@ -1,0 +1,44 @@
+name: AutoGate Compatible Security Fix Trial
+on:
+  push:
+    branches: [autogate-webp-update]
+    paths: ['.github/workflows/autogate-security-remediation.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Trial compatible fixes
+        run: |
+          mkdir -p audit-trial
+          python - <<'PY'
+          import subprocess, json
+          from pathlib import Path
+          def audit(name):
+              r = subprocess.run(['npm','audit','--json','--legacy-peer-deps'],capture_output=True,text=True)
+              d = json.loads(r.stdout)
+              if 'error' in d or 'metadata' not in d:
+                  raise RuntimeError('Audit unavailable')
+              Path('audit-trial/'+name+'.json').write_text(r.stdout)
+              print(name, d['metadata']['vulnerabilities'])
+          audit('before')
+          r = subprocess.run(['npm','audit','fix','--package-lock-only','--ignore-scripts','--legacy-peer-deps'])
+          print('Audit fix exit:',r.returncode)
+          subprocess.run(['git','diff','--exit-code','--','package.json'],check=True)
+          audit('after')
+          subprocess.run(['git','diff','--','package-lock.json'],stdout=Path('audit-trial/lockfile.patch').open('w'),check=True)
+          PY
+      - run: npm ci --legacy-peer-deps
+      - run: npm run verify:locales
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: compatible-security-fix-trial
+          path: audit-trial/

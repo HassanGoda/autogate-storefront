@@ -4,7 +4,7 @@
       "name": "Engine Parts",
       "slug": "ag-engine-parts",
       "items": 4,
-      "image": "/images/autogate-parts/ag-engine-parts.jpg",
+      "image": "/images/autogate-parts/ag-engine-parts.webp",
       "children": [
         {
           "slug": "ag-spark-plugs",
@@ -33,7 +33,7 @@
       "name": "Body Parts",
       "slug": "ag-body-parts",
       "items": 2,
-      "image": "/images/autogate-parts/ag-body-parts.jpg",
+      "image": "/images/autogate-parts/ag-body-parts.webp",
       "children": [
         {
           "slug": "ag-bumpers",
@@ -62,25 +62,25 @@
       "name": "Electrical",
       "slug": "ag-electrical",
       "items": 2,
-      "image": "/images/autogate-parts/ag-electrical.jpg"
+      "image": "/images/autogate-parts/ag-electrical.webp"
     },
     {
       "name": "Suspension",
       "slug": "ag-suspension",
       "items": 2,
-      "image": "/images/autogate-parts/ag-suspension.jpg"
+      "image": "/images/autogate-parts/ag-suspension.webp"
     },
     {
       "name": "Accessories",
       "slug": "ag-accessories",
       "items": 2,
-      "image": "/images/autogate-parts/ag-accessories.jpg"
+      "image": "/images/autogate-parts/ag-accessories.webp"
     },
     {
       "name": "Others",
       "slug": "ag-others",
       "items": 0,
-      "image": "/images/autogate-parts/ag-others.jpg"
+      "image": "/images/autogate-parts/ag-others.webp"
     },
     {
       "slug": "ag-lighting",
@@ -260,7 +260,7 @@
       "sku": "AG-REF-001",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-engine-oil-filter.jpg"
+        "/images/autogate-parts/ag-engine-oil-filter.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -281,7 +281,7 @@
       "sku": "AG-REF-002",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-spark-plugs-set.jpg"
+        "/images/autogate-parts/ag-spark-plugs-set.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -302,7 +302,7 @@
       "sku": "AG-REF-003",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-air-filter.jpg"
+        "/images/autogate-parts/ag-air-filter.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -323,7 +323,7 @@
       "sku": "AG-REF-004",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-car-door-handle.jpg"
+        "/images/autogate-parts/ag-car-door-handle.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -344,7 +344,7 @@
       "sku": "AG-REF-005",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-headlight-assembly.jpg"
+        "/images/autogate-parts/ag-headlight-assembly.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -365,7 +365,7 @@
       "sku": "AG-REF-006",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-car-battery.jpg"
+        "/images/autogate-parts/ag-car-battery.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -383,7 +383,7 @@
       "sku": "AG-REF-007",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-alternator.jpg"
+        "/images/autogate-parts/ag-alternator.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -401,7 +401,7 @@
       "sku": "AG-REF-008",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-brake-pad-set.jpg"
+        "/images/autogate-parts/ag-brake-pad-set.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -420,7 +420,7 @@
       "sku": "AG-REF-009",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-shock-absorber.jpg"
+        "/images/autogate-parts/ag-shock-absorber.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -439,7 +439,7 @@
       "sku": "AG-REF-010",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-car-floor-mats.jpg"
+        "/images/autogate-parts/ag-car-floor-mats.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -458,7 +458,7 @@
       "sku": "AG-REF-011",
       "price": 0,
       "images": [
-        "/images/autogate-parts/ag-phone-mount.jpg"
+        "/images/autogate-parts/ag-phone-mount.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -476,7 +476,7 @@
       "sku": "AG-REF-012",
       "price": 0,
       "images": [
-        "/images/products/product-6-1.jpg"
+        "/images/products/product-6-1.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -495,7 +495,7 @@
       "sku": "AG-REF-013",
       "price": 0,
       "images": [
-        "/images/products/product-2-1.jpg"
+        "/images/products/product-2-1.webp"
       ],
       "rating": 0,
       "reviews": 0,
@@ -513,7 +513,7 @@
       "sku": "AG-REF-014",
       "price": 0,
       "images": [
-        "/images/products/product-11-1.jpg"
+        "/images/products/product-11-1.webp"
       ],
       "rating": 0,
       "reviews": 0,

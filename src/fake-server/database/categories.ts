@@ -75,7 +75,7 @@ const shopCategoriesDef: ICategoryDef[] = [
     {
         name: 'Headlights & Lighting',
         slug: 'headlights-lighting',
-        image: '/images/categories/category-1.jpg',
+        image: '/images/categories/category-1.webp',
         children: [
             { name: 'Turn Signals', slug: 'turn-signals' },
             { name: 'Fog Lights', slug: 'fog-lights' },
@@ -90,7 +90,7 @@ const shopCategoriesDef: ICategoryDef[] = [
     {
         name: 'Fuel System',
         slug: 'fuel-system',
-        image: '/images/categories/category-2.jpg',
+        image: '/images/categories/category-2.webp',
         children: [
             { name: 'Fuel Pumps', slug: 'fuel-pumps' },
             { name: 'Motor Oil', slug: 'motor-oil' },
@@ -102,7 +102,7 @@ const shopCategoriesDef: ICategoryDef[] = [
     {
         name: 'Body Parts',
         slug: 'body-parts',
-        image: '/images/categories/category-3.jpg',
+        image: '/images/categories/category-3.webp',
         children: [
             { name: 'Bumpers', slug: 'bumpers' },
             { name: 'Hoods', slug: 'hoods' },
@@ -114,7 +114,7 @@ const shopCategoriesDef: ICategoryDef[] = [
     {
         name: 'Interior Parts',
         slug: 'interior-parts',
-        image: '/images/categories/category-4.jpg',
+        image: '/images/categories/category-4.webp',
         children: [
             { name: 'Dashboards', slug: 'dashboards' },
             { name: 'Seat Covers', slug: 'seat-covers' },
@@ -128,7 +128,7 @@ const shopCategoriesDef: ICategoryDef[] = [
     {
         name: 'Tires & Wheels',
         slug: 'tires-wheels',
-        image: '/images/categories/category-5.jpg',
+        image: '/images/categories/category-5.webp',
         children: [
             { name: 'Wheel Covers', slug: 'wheel-covers' },
             { name: 'Brake Kits', slug: 'brake-kits' },
@@ -142,7 +142,7 @@ const shopCategoriesDef: ICategoryDef[] = [
     {
         name: 'Engine & Drivetrain',
         slug: 'engine-drivetrain',
-        image: '/images/categories/category-6.jpg',
+        image: '/images/categories/category-6.webp',
         children: [
             { name: 'Timing Belts', slug: 'timing-belts' },
             { name: 'Spark Plugs', slug: 'spark-plugs' },
@@ -156,12 +156,12 @@ const shopCategoriesDef: ICategoryDef[] = [
     {
         name: 'Oils & Lubricants',
         slug: 'oils-lubricants',
-        image: '/images/categories/category-7.jpg',
+        image: '/images/categories/category-7.webp',
     },
     {
         name: 'Tools & Garage',
         slug: 'tools-garage',
-        image: '/images/categories/category-8.jpg',
+        image: '/images/categories/category-8.webp',
     },
 ];
 

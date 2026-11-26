@@ -21,7 +21,7 @@ class MyDocument extends Document {
         return (
             <Html lang={lang} dir={dir}>
                 <Head>
-                    <link rel="shortcut icon" href={baseUrl('/images/favicon.png')} />
+                    <link rel="shortcut icon" href={baseUrl('/images/favicon.webp')} />
 
                     {/* fonts */}
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" />

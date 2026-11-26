@@ -47,7 +47,7 @@ function Page() {
                         <div
                             className="about__image-bg"
                             style={{
-                                backgroundImage: `url(${baseUrl('/images/autogate-about.jpg')})`,
+                                backgroundImage: `url(${baseUrl('/images/autogate-about.webp')})`,
                             }}
                         />
                         <Decor className="about__image-decor" type="bottom" />

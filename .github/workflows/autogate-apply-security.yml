@@ -1,0 +1,44 @@
+name: AutoGate Apply Verified Security Fixes
+on:
+  push:
+    branches: [autogate-webp-update]
+    paths: ['.github/workflows/autogate-apply-security.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.ref == 'refs/heads/autogate-webp-update'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reproduce reviewed lockfile
+        run: |
+          test "$(git hash-object package-lock.json)" = c52be5db23c5acd120cf87e75e708ad3a3b86cc0
+          npm audit fix --package-lock-only --ignore-scripts --legacy-peer-deps || true
+          git diff --exit-code -- package.json
+          test "$(git hash-object package-lock.json | cut -c1-7)" = 07067c3
+      - run: npm ci --legacy-peer-deps
+      - run: npm run verify:locales
+      - run: npm run build
+      - name: Verify security results
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          r = subprocess.run(['npm','audit','--json','--legacy-peer-deps'],capture_output=True,text=True)
+          d = json.loads(r.stdout)
+          v = d['metadata']['vulnerabilities']
+          print(v)
+          assert v['total'] <= 17 and v['critical'] <= 4 and v['high'] <= 7
+          PY
+      - name: Commit validated lockfile only
+        run: |
+          test "$(git hash-object package-lock.json | cut -c1-7)" = 07067c3
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "Apply validated compatible dependency security fixes"
+          git push origin HEAD:autogate-webp-update

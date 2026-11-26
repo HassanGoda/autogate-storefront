@@ -8,7 +8,7 @@ const dataHeaderDepartments: IDepartmentsLink[] = [
         submenu: {
             type: 'megamenu',
             size: 'xl',
-            image: '/images/departments/departments-1.jpg',
+            image: '/images/departments/departments-1.webp',
             columns: [
                 {
                     size: '1of5',
@@ -113,7 +113,7 @@ const dataHeaderDepartments: IDepartmentsLink[] = [
         submenu: {
             type: 'megamenu',
             size: 'lg',
-            image: '/images/departments/departments-4.jpg',
+            image: '/images/departments/departments-4.webp',
             columns: [
                 {
                     size: 3,
@@ -283,7 +283,7 @@ const dataHeaderDepartments: IDepartmentsLink[] = [
         submenu: {
             type: 'megamenu',
             size: 'nl',
-            image: '/images/products/product-4-1.jpg',
+            image: '/images/products/product-4-1.webp',
             columns: [
                 {
                     size: 6,

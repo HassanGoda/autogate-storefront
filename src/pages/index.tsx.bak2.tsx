@@ -50,18 +50,18 @@ function Page() {
 
     const blockZones = useMemo(() => [
         {
-            image: '/images/autogate-parts/ag-suspension.jpg',
-            mobileImage: '/images/autogate-parts/ag-suspension.jpg',
+            image: '/images/autogate-parts/ag-suspension.webp',
+            mobileImage: '/images/autogate-parts/ag-suspension.webp',
             categorySlug: 'ag-suspension',
         },
         {
-            image: '/images/autogate-parts/ag-body-parts.jpg',
-            mobileImage: '/images/autogate-parts/ag-body-parts.jpg',
+            image: '/images/autogate-parts/ag-body-parts.webp',
+            mobileImage: '/images/autogate-parts/ag-body-parts.webp',
             categorySlug: 'ag-body-parts',
         },
         {
-            image: '/images/autogate-parts/ag-engine-parts.jpg',
-            mobileImage: '/images/autogate-parts/ag-engine-parts.jpg',
+            image: '/images/autogate-parts/ag-engine-parts.webp',
+            mobileImage: '/images/autogate-parts/ag-engine-parts.webp',
             categorySlug: 'ag-engine-parts',
         },
     ], []);

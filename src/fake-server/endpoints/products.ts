@@ -49,6 +49,7 @@ function normalizeSearch(value: string): string {
 
 function matchesSearch(value: string, query: string): boolean {
     const needle = normalizeSearch(query);
+    if (!needle) return false;
     return [value, translateText(value, 'ar')].some((text) => normalizeSearch(text).includes(needle));
 }
 
@@ -70,7 +71,7 @@ export function getProductsList(
         new VehicleFilterBuilder('vehicle', 'Vehicle'),
     ];
 
-    let products = filterValues.query ? dbProducts.filter((product) => matchesProduct(product, filterValues.query)) : dbProducts.slice(0);
+    let products = filterValues.query && normalizeSearch(filterValues.query) ? dbProducts.filter((product) => matchesProduct(product, filterValues.query)) : dbProducts.slice(0);
 
     if (filterValues.make) {
         const make = carBrands.find((brand) => brand.key === filterValues.make);
@@ -186,7 +187,7 @@ export function addProductReview(productId: number, data: IAddProductReviewData)
         id: getNextReviewId(),
         date: (new Date()).toISOString().substr(0, 10),
         author: data.author,
-        avatar: '/images/avatars/avatar-2.jpg',
+        avatar: '/images/avatars/avatar-2.webp',
         rating: data.rating,
         content: data.content,
     };
@@ -244,6 +245,10 @@ export function getSearchSuggestions(
         limitCategories: 4,
         ...options,
     };
+
+    if (!normalizeSearch(query)) {
+        return Promise.resolve({ products: [], categories: [] });
+    }
 
     const resultProducts = dbProducts.filter((x) => matchesProduct(x, query));
     const resultCategories = shopCategoriesList.filter((x) => matchesSearch(x.name, query));
